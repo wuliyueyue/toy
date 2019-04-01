@@ -1,0 +1,1216 @@
+/usr/bin/python /home/lmy/tool/lava-master/scripts/inject.py -t ptr_add,rel_write -m 50 -e 0 /home/lmy/tool/lava-master/host.json toy
+allowed bug types: [0, 2]
+Getting locked bugs directory...
+Using dir /home/lmy/tool/lava-master/target_injections/toy/bugs/0
+Picking bugs to inject.
+Selecting 50 bugs for injection of 2319 available
+50 is size of bug_list
+source_root = toy
+
+Re-configuring...
+run( true --prefix=/home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install )
+config.mak = [/home/lmy/tool/lava-master/tools/lavaTool/config.mak]
+llvm_src = [/llvm-3.6.2]
+------------
+
+SELECTED 
+BUG 0 id=24
+    ATP file:  toy.c
+        line:  64
+DUA:
+    DUA[2](lval=Lval[2](loc=toy.c:33, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[3](loc=toy.c:64, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 1 id=34
+    ATP file:  toy.c
+        line:  64
+DUA:
+    DUA[12](lval=Lval[12](loc=toy.c:33, ast="&((*hdr).timestamp)"), labels=[12, 13, 14, 15], viable=[[12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[3](loc=toy.c:64, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 2 id=176
+    ATP file:  toy.c
+        line:  68
+DUA:
+    DUA[7](lval=Lval[7](loc=toy.c:33, ast="hdr"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], viable=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 3 id=223
+    ATP file:  toy.c
+        line:  68
+DUA:
+    DUA[54](lval=Lval[54](loc=toy.c:68, ast="((*f)._IO_buf_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168800, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 4 id=317
+    ATP file:  toy.c
+        line:  38
+DUA:
+    DUA[23](lval=Lval[23](loc=toy.c:64, ast="&(head.flags)"), labels=[10, 11, 12, 13], viable=[[10], [11], [12], [13]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=10.0
+------------
+
+SELECTED 
+BUG 5 id=338
+    ATP file:  toy.c
+        line:  38
+DUA:
+    DUA[44](lval=Lval[44](loc=toy.c:67, ast="&(head.magic)"), labels=[0, 1, 2, 3], viable=[[0], [1], [2], [3]],                 input=testsmall.bin, instr=20168777, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 6 id=450
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[19](lval=Lval[19](loc=toy.c:64, ast="&head"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], viable=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 7 id=451
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[20](lval=Lval[20](loc=toy.c:64, ast="&(head.magic)"), labels=[0, 1, 2, 3], viable=[[0], [1], [2], [3]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 8 id=470
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[39](lval=Lval[39](loc=toy.c:67, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168777, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 9 id=504
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[1](lval=Lval[1](loc=toy.c:33, ast="((*f)._IO_read_ptr)"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45], [46], [47]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 10 id=506
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[3](lval=Lval[3](loc=toy.c:33, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 11 id=514
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[11](lval=Lval[11](loc=toy.c:33, ast="&((*hdr).flags)"), labels=[10, 11, 12, 13], viable=[[10], [11], [12], [13]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=10.0
+------------
+
+SELECTED 
+BUG 12 id=518
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[15](lval=Lval[15](loc=toy.c:64, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 13 id=536
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[33](lval=Lval[33](loc=toy.c:66, ast="&(head.reserved)"), labels=[4, 5, 6, 7], viable=[[4], [5], [6], [7]],                 input=testsmall.bin, instr=20168760, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 14 id=583
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[8](lval=Lval[8](loc=toy.c:33, ast="&((*hdr).magic)"), labels=[0, 1, 2, 3], viable=[[0], [1], [2], [3]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 15 id=639
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[64](lval=Lval[64](loc=toy.c:38, ast="((*f)._IO_write_ptr)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168904, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 16 id=650
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[3](lval=Lval[3](loc=toy.c:33, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 17 id=654
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[7](lval=Lval[7](loc=toy.c:33, ast="hdr"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], viable=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 18 id=656
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[9](lval=Lval[9](loc=toy.c:33, ast="&((*hdr).reserved)"), labels=[4, 5, 6, 7], viable=[[4], [5], [6], [7]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 19 id=662
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[15](lval=Lval[15](loc=toy.c:64, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 20 id=669
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[22](lval=Lval[22](loc=toy.c:64, ast="&(head.num_recs)"), labels=[8, 9, 10, 11], viable=[[8], [9], [10], [11]],                 input=testsmall.bin, instr=20036927, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 21 id=685
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[38](lval=Lval[38](loc=toy.c:67, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168777, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 22 id=688
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[41](lval=Lval[41](loc=toy.c:67, ast="((*f)._IO_write_end)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168777, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 23 id=893
+    ATP file:  toy.c
+        line:  69
+DUA:
+    DUA[9](lval=Lval[9](loc=toy.c:33, ast="&((*hdr).reserved)"), labels=[4, 5, 6, 7], viable=[[4], [5], [6], [7]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 24 id=916
+    ATP file:  toy.c
+        line:  69
+DUA:
+    DUA[32](lval=Lval[32](loc=toy.c:66, ast="&(head.magic)"), labels=[0, 1, 2, 3], viable=[[0], [1], [2], [3]],                 input=testsmall.bin, instr=20168760, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 25 id=922
+    ATP file:  toy.c
+        line:  69
+DUA:
+    DUA[38](lval=Lval[38](loc=toy.c:67, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20168777, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 26 id=963
+    ATP file:  toy.c
+        line:  69
+DUA:
+    DUA[79](lval=Lval[79](loc=toy.c:41, ast="ret"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=0.0
+------------
+
+SELECTED 
+BUG 27 id=1268
+    ATP file:  toy.c
+        line:  56
+DUA:
+    DUA[2](lval=Lval[2](loc=toy.c:33, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20036898, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 28 id=1325
+    ATP file:  toy.c
+        line:  56
+DUA:
+    DUA[59](lval=Lval[59](loc=toy.c:68, ast="&(head.flags)"), labels=[10, 11, 12, 13], viable=[[10], [11], [12], [13]],                 input=testsmall.bin, instr=20168800, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=10.0
+------------
+
+SELECTED 
+BUG 29 id=1338
+    ATP file:  toy.c
+        line:  56
+DUA:
+    DUA[72](lval=Lval[72](loc=toy.c:39, ast="((*f)._IO_buf_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20169959, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 30 id=1375
+    ATP file:  toy.c
+        line:  56
+DUA:
+    DUA[109](lval=Lval[109](loc=toy.c:56, ast="((*ent).bar)"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]],                 input=testsmall.bin, instr=20450906, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 31 id=1444
+    ATP file:  toy.c
+        line:  68
+DUA:
+    DUA[71](lval=Lval[71](loc=toy.c:39, ast="((*f)._IO_write_end)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20169959, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 32 id=1450
+    ATP file:  toy.c
+        line:  68
+DUA:
+    DUA[77](lval=Lval[77](loc=toy.c:41, ast="((*f)._IO_write_end)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 33 id=1530
+    ATP file:  toy.c
+        line:  38
+DUA:
+    DUA[68](lval=Lval[68](loc=toy.c:39, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20169959, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 34 id=1541
+    ATP file:  toy.c
+        line:  38
+DUA:
+    DUA[79](lval=Lval[79](loc=toy.c:41, ast="ret"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 35 id=1565
+    ATP file:  toy.c
+        line:  38
+DUA:
+    DUA[103](lval=Lval[103](loc=toy.c:47, ast="ent"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39]],                 input=testsmall.bin, instr=20172543, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 36 id=1613
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[74](lval=Lval[74](loc=toy.c:41, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 37 id=1617
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[78](lval=Lval[78](loc=toy.c:41, ast="((*f)._IO_buf_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 38 id=1619
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[80](lval=Lval[80](loc=toy.c:41, ast="&((*ret).bar)"), labels=[16, 17, 18, 19], viable=[[16], [17], [18], [19]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 39 id=1643
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[104](lval=Lval[104](loc=toy.c:47, ast="&((*ent).bar)"), labels=[16, 17, 18, 19], viable=[[16], [17], [18], [19]],                 input=testsmall.bin, instr=20172543, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 40 id=1654
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[74](lval=Lval[74](loc=toy.c:41, ast="((*f)._IO_read_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 41 id=1668
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[88](lval=Lval[88](loc=toy.c:69, ast="((*f)._IO_buf_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170459, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 42 id=1698
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[77](lval=Lval[77](loc=toy.c:41, ast="((*f)._IO_write_end)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170433, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 43 id=1751
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[89](lval=Lval[89](loc=toy.c:69, ast="&head"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], viable=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20170459, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 44 id=1837
+    ATP file:  toy.c
+        line:  69
+DUA:
+    DUA[95](lval=Lval[95](loc=toy.c:45, ast="ent"), labels=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], viable=[[16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33], [34], [35], [36], [37], [38], [39]],                 input=testsmall.bin, instr=20170567, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 45 id=2034
+    ATP file:  toy.c
+        line:  50
+DUA:
+    DUA[35](lval=Lval[35](loc=toy.c:66, ast="&(head.flags)"), labels=[10, 11, 12, 13], viable=[[10], [11], [12], [13]],                 input=testsmall.bin, instr=20168760, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=10.0
+------------
+
+SELECTED 
+BUG 46 id=2062
+    ATP file:  toy.c
+        line:  50
+DUA:
+    DUA[125](lval=Lval[63](loc=toy.c:38, ast="((*f)._IO_write_base)"), labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[0], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]],                 input=testsmall.bin, instr=20453009, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 47 id=2101
+    ATP file:  toy.c
+        line:  50
+DUA:
+    DUA[169](lval=Lval[102](loc=toy.c:46, ast="&((*ent).type)"), labels=[56, 57, 58, 59], viable=[[56], [57], [58], [59]],                 input=testsmall.bin, instr=20454720, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=2.0
+------------
+
+SELECTED 
+BUG 48 id=2231
+    ATP file:  toy.c
+        line:  56
+DUA:
+    DUA[136](lval=Lval[112](loc=toy.c:39, ast="((*ret).bar)"), labels=[20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], viable=[[20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]],                 input=testsmall.bin, instr=20453203, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+SELECTED 
+BUG 49 id=2273
+    ATP file:  toy.c
+        line:  39
+DUA:
+    DUA[172](lval=Lval[118](loc=toy.c:50, ast="&((*ent).bar)"), labels=[40, 41, 42, 43], viable=[[40], [41], [42], [43]],                 input=testsmall.bin, instr=20454745, fake_dua=False)
+      Src_file:  toy.c
+      Filename:  testsmall.bin
+ATP:
+    ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL)
+max_tcn=0  max_liveness=6.0
+------------
+
+CLEAN UP SRC
+------------
+
+INJECTING BUGS INTO SOURCE
+1 source files: 
+set([u'toy.c'])
+compile commands is here: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/compile_commands.json
+all_c_files: set([u'toy.c'])
+all_files: set([u'toy.c'])
+Running lavaTool on [toy.c]...
+lavaTool command: /home/lmy/tool/lava-master/tools/install/bin/lavaTool -action=inject -bug-list=24,34,176,223,317,338,450,451,470,504,506,514,518,536,583,639,650,654,656,662,669,685,688,893,916,922,963,1268,1325,1338,1375,1444,1450,1530,1541,1565,1613,1617,1619,1643,1654,1668,1698,1751,1837,2034,2062,2101,2231,2273 -src-prefix=/home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy -db=toy_lmy -main-files=/home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/toy.c /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/toy.c -lava-wl=/home/lmy/tool/lava-master/target_injections/toy/fninstr -arg_dataflow
+Apply replacements in /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/ with ['/llvm-3.6.2/Release/bin/clang-apply-replacements', '.', '-remove-change-desc-files']
+Success in 
+rm -f toy.o toy
+------------
+
+ATTEMPTING BUILD OF INJECTED BUG(S)
+build_dir = /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy
+build succeeded
+mkdir -p /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin
+cp toy /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin
+run( git commit -am "Bugs for build 3." )
+[master 50fc177] Bugs for build 3.
+ 1 file changed, 158 insertions(+), 19 deletions(-)
+run( git branch build3 master )
+run( git reset HEAD~ --hard )
+HEAD is now at 8544adf Add compile_commands.json.
+------------
+
+TESTING -- ORIG INPUT
+[34L, 536L, 1619L, 1444L, 669L, 963L, 2034L, 650L, 1338L, 1541L, 338L, 504L, 1643L, 506L, 1613L, 450L, 1268L, 1375L, 583L, 654L, 916L, 514L, 470L, 2231L, 24L, 317L, 223L, 518L, 685L, 1617L, 2101L, 656L, 1698L, 2062L, 893L, 1837L, 662L, 639L, 1654L, 1668L, 1325L, 1450L, 1565L, 176L, 1751L, 451L, 2273L, 922L, 688L, 1530L]
+------------
+
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall.bin
+buggy program succeeds on original input testsmall.binwith exit code 0
+output:
+ORIG INPUT STILL WORKS
+
+TESTING -- FUZZED INPUTS
+============================================================
+Validating bug 1 of 50 
+No known solution for bug with id=24
+Bug[24](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[3](loc=toy.c:64, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-24.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-24.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 2 of 50 
+No known solution for bug with id=34
+Bug[34](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, &((*hdr).timestamp), real]][0:4](labels=[12, 13, 14, 15]), atp=ATP[3](loc=toy.c:64, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-34.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-34.bin
+retval = 0
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 3 of 50 
+No known solution for bug with id=176
+Bug[176](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, hdr, real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-176.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-176.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 4 of 50 
+No known solution for bug with id=223
+Bug[223](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:68, ((*f)._IO_buf_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-223.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-223.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 5 of 50 
+No known solution for bug with id=317
+Bug[317](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, &(head.flags), real]][0:4](labels=[10, 11, 12, 13]), atp=ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-317.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-317.bin
+retval = 0
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 6 of 50 
+No known solution for bug with id=338
+Bug[338](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:67, &(head.magic), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-338.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-338.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 7 of 50 
+No known solution for bug with id=450
+Bug[450](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, &head, real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-450.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-450.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 8 of 50 
+No known solution for bug with id=451
+Bug[451](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, &(head.magic), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-451.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-451.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 9 of 50 
+No known solution for bug with id=470
+Bug[470](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:67, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-470.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-470.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 10 of 50 
+No known solution for bug with id=504
+Bug[504](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, ((*f)._IO_read_ptr), real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-504.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-504.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 11 of 50 
+No known solution for bug with id=506
+Bug[506](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-506.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-506.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 12 of 50 
+No known solution for bug with id=514
+Bug[514](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, &((*hdr).flags), real]][0:4](labels=[10, 11, 12, 13]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-514.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-514.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 13 of 50 
+No known solution for bug with id=518
+Bug[518](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-518.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-518.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 14 of 50 
+No known solution for bug with id=536
+Bug[536](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:66, &(head.reserved), real]][0:4](labels=[4, 5, 6, 7]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-536.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-536.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 15 of 50 
+No known solution for bug with id=583
+Bug[583](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, &((*hdr).magic), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-583.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-583.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 16 of 50 
+No known solution for bug with id=639
+Bug[639](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:38, ((*f)._IO_write_ptr), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-639.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-639.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 17 of 50 
+No known solution for bug with id=650
+Bug[650](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-650.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-650.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 18 of 50 
+No known solution for bug with id=654
+Bug[654](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, hdr, real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-654.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-654.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 19 of 50 
+No known solution for bug with id=656
+Bug[656](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, &((*hdr).reserved), real]][0:4](labels=[4, 5, 6, 7]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-656.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-656.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 20 of 50 
+No known solution for bug with id=662
+Bug[662](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-662.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-662.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 21 of 50 
+No known solution for bug with id=669
+Bug[669](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:64, &(head.num_recs), real]][0:4](labels=[8, 9, 10, 11]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-669.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-669.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 22 of 50 
+No known solution for bug with id=685
+Bug[685](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:67, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-685.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-685.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 23 of 50 
+No known solution for bug with id=688
+Bug[688](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:67, ((*f)._IO_write_end), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-688.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-688.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 24 of 50 
+No known solution for bug with id=893
+Bug[893](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, &((*hdr).reserved), real]][0:4](labels=[4, 5, 6, 7]), atp=ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-893.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-893.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 25 of 50 
+No known solution for bug with id=916
+Bug[916](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:66, &(head.magic), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-916.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-916.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 26 of 50 
+No known solution for bug with id=922
+Bug[922](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:67, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-922.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-922.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 27 of 50 
+No known solution for bug with id=963
+Bug[963](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ret, real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-963.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-963.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 28 of 50 
+No known solution for bug with id=1268
+Bug[1268](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:33, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1268.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1268.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 29 of 50 
+No known solution for bug with id=1325
+Bug[1325](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:68, &(head.flags), real]][0:4](labels=[10, 11, 12, 13]), atp=ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1325.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1325.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 30 of 50 
+No known solution for bug with id=1338
+Bug[1338](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:39, ((*f)._IO_buf_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1338.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1338.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 31 of 50 
+No known solution for bug with id=1375
+Bug[1375](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:56, ((*ent).bar), real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1375.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1375.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 32 of 50 
+No known solution for bug with id=1444
+Bug[1444](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:39, ((*f)._IO_write_end), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1444.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1444.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 33 of 50 
+No known solution for bug with id=1450
+Bug[1450](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ((*f)._IO_write_end), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[7](loc=toy.c:68, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1450.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1450.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 34 of 50 
+No known solution for bug with id=1530
+Bug[1530](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:39, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1530.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1530.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 35 of 50 
+No known solution for bug with id=1541
+Bug[1541](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ret, real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1541.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1541.bin
+retval = 0
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 36 of 50 
+No known solution for bug with id=1565
+Bug[1565](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:47, ent, real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[9](loc=toy.c:38, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1565.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1565.bin
+retval = 0
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 37 of 50 
+No known solution for bug with id=1613
+Bug[1613](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1613.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1613.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 38 of 50 
+No known solution for bug with id=1617
+Bug[1617](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ((*f)._IO_buf_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1617.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1617.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 39 of 50 
+No known solution for bug with id=1619
+Bug[1619](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, &((*ret).bar), real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1619.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1619.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 40 of 50 
+No known solution for bug with id=1643
+Bug[1643](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:47, &((*ent).bar), real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1643.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1643.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 41 of 50 
+No known solution for bug with id=1654
+Bug[1654](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ((*f)._IO_read_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1654.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1654.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 42 of 50 
+No known solution for bug with id=1668
+Bug[1668](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:69, ((*f)._IO_buf_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[12](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1668.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1668.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 43 of 50 
+No known solution for bug with id=1698
+Bug[1698](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:41, ((*f)._IO_write_end), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[13](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1698.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1698.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 44 of 50 
+No known solution for bug with id=1751
+Bug[1751](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:69, &head, real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[14](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1751.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1751.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 45 of 50 
+No known solution for bug with id=1837
+Bug[1837](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:45, ent, real]][0:4](labels=[16, 17, 18, 19]), atp=ATP[17](loc=toy.c:69, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1837.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-1837.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 46 of 50 
+No known solution for bug with id=2034
+Bug[2034](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:66, &(head.flags), real]][0:4](labels=[10, 11, 12, 13]), atp=ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2034.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2034.bin
+retval = 0
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 47 of 50 
+No known solution for bug with id=2062
+Bug[2062](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:38, ((*f)._IO_write_base), real]][0:4](labels=[0, 1, 2, 3]), atp=ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2062.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2062.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 48 of 50 
+No known solution for bug with id=2101
+Bug[2101](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:46, &((*ent).type), real]][0:4](labels=[56, 57, 58, 59]), atp=ATP[24](loc=toy.c:50, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2101.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2101.bin
+retval = 1
+bug type is BUG_PTR_ADD
+RV does not indicate memory corruption
+
+============================================================
+Validating bug 49 of 50 
+No known solution for bug with id=2231
+Bug[2231](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:39, ((*ret).bar), real]][4:8](labels=[20, 21, 22, 23]), atp=ATP[22](loc=toy.c:56, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2231.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2231.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+============================================================
+Validating bug 50 of 50 
+No known solution for bug with id=2273
+Bug[2273](type=BUG_PTR_ADD, trigger=DUABytes[DUA[toy.c:50, &((*ent).bar), real]][0:4](labels=[40, 41, 42, 43]), atp=ATP[11](loc=toy.c:39, type=ATP_FUNCTION_CALL))
+fuzzed = [/home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2273.bin]
+Run modified program: /home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy/lava-install/bin/toy /home/lmy/tool/lava-master/target_injections/toy/inputs/testsmall-fuzzed-2273.bin
+retval = 139
+bug type is BUG_PTR_ADD
+RV indicates memory corruption
+
+yield 0.22 (11 out of 50) real bugs (95% CI +/- 0.11) 
+A BOUNTIFUL CROP OF BUGS: 656,669,893,963,1325,1375,1619,1643,1837,2231,2273
+TESTING COMPLETE
+
+Bug types in original, potential set
+0 c(BUG_PTR_ADD)=50
+[34L, 536L, 1619L, 1444L, 669L, 963L, 2034L, 650L, 1338L, 1541L, 338L, 504L, 1643L, 506L, 1613L, 450L, 1268L, 1375L, 583L, 654L, 916L, 514L, 470L, 2231L, 24L, 317L, 223L, 518L, 685L, 1617L, 2101L, 656L, 1698L, 2062L, 893L, 1837L, 662L, 639L, 1654L, 1668L, 1325L, 1450L, 1565L, 176L, 1751L, 451L, 2273L, 922L, 688L, 1530L]
+
+Bug types in validated set
+0 c(BUG_PTR_ADD)=11
+[656L, 669L, 893L, 963L, 1325L, 1375L, 1619L, 1643L, 1837L, 2231L, 2273L]
+inject complete 1.98 seconds

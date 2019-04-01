@@ -1,0 +1,80 @@
+cd /home/lmy/tool/lava-master/target_injections/toy/toy && make CFLAGS+=-gdwarf-2
+cc -gdwarf-2   -c -o toy.o toy.c
+In file included from [01m[Ktoy.c:1:0[m[K:
+[01m[Kpirate_mark_lava.h:[m[K In function ‘[01m[Khypercall2[m[K’:
+[01m[Kpirate_mark_lava.h:70:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[Kvolatile[m[K int __attribute__ ((visibility ("hidden"))) lava_save_nodua = 0;
+     [01;35m[K^~~~~~~~[m[K
+[01m[Ktoy.c:[m[K In function ‘[01m[Kparse_header[m[K’:
+[01m[Ktoy.c:32:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(0, 31, 0); if (1 != fread(hdr + ({vm_lava_attack_point2(1, 0, 0); 0;}), sizeof(file_header) + ({vm_lava_attack_point2(2, 0, 0); 0;}), 1 + ({vm_lava_attack_point2(3, 0, 0); 0;}), f + ({vm_lava_attack_point2(4, 0, 0); 0;})))
+     [01;35m[K^[m[K
+[01m[Ktoy.c:34:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(6, 33, 0); if (hdr->magic != MAGIC)
+     [01;35m[K^[m[K
+[01m[Ktoy.c:[m[K In function ‘[01m[Kparse_record[m[K’:
+[01m[Ktoy.c:39:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(8, 38, 0); file_entry *ret = (file_entry *) malloc(sizeof(file_entry) + ({vm_lava_attack_point2(9, 0, 0); 0;}));
+     [01;35m[K^[m[K
+[01m[Ktoy.c:40:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(10, 39, 0); if (1 != fread(ret + ({vm_lava_attack_point2(11, 0, 0); 0;}), sizeof(file_entry) + ({vm_lava_attack_point2(12, 0, 0); 0;}), 1 + ({vm_lava_attack_point2(13, 0, 0); 0;}), f + ({vm_lava_attack_point2(14, 0, 0); 0;})))
+     [01;35m[K^[m[K
+[01m[Ktoy.c:42:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(16, 41, 0); return ret;
+     [01;35m[K^[m[K
+[01m[Ktoy.c:[m[K In function ‘[01m[Kconsume_record[m[K’:
+[01m[Ktoy.c:46:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(17, 45, 0); printf("Entry: bar = %s, ", ent->bar);
+     [01;35m[K^[m[K
+[01m[Ktoy.c:47:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(18, 46, 0); if (ent->type == TYPEA) {
+     [01;35m[K^[m[K
+[01m[Ktoy.c:48:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(19, 47, 0); printf("fdata = %f\n", ent->data.fdata);
+         [01;35m[K^[m[K
+[01m[Ktoy.c:51:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(20, 50, 0); printf("intdata = %u\n", ent->data.intdata + ({vm_lava_attack_point2(21, 0, 0); 0;}));
+         [01;35m[K^[m[K
+[01m[Ktoy.c:54:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(22, 53, 0); printf("Unknown type %x\n", ent->type + ({vm_lava_attack_point2(23, 0, 0); 0;}));
+         [01;35m[K^[m[K
+[01m[Ktoy.c:55:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(24, 54, 0); exit(1 + ({vm_lava_attack_point2(25, 0, 0); 0;}));
+         [01;35m[K^[m[K
+[01m[Ktoy.c:57:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(26, 56, 0); free(ent + ({vm_lava_attack_point2(27, 0, 0); 0;}));
+     [01;35m[K^[m[K
+[01m[Ktoy.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Ktoy.c:61:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(28, 60, 0); FILE *f = fopen(argv[1 + ({vm_lava_attack_point2(30, 0, 1); 0;})] + ({vm_lava_attack_point2(29, 0, 0); 0;}), "rb");
+     [01;35m[K^[m[K
+[01m[Ktoy.c:62:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(31, 61, 0); file_header head;
+     [01;35m[K^[m[K
+[01m[Ktoy.c:64:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(32, 63, 0); parse_header(f + ({vm_lava_attack_point2(33, 0, 0); 0;}), &head + ({vm_lava_attack_point2(34, 0, 0); 0;}));
+     [01;35m[K^[m[K
+[01m[Ktoy.c:65:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(35, 64, 0); printf("File timestamp: %u\n", head.timestamp + ({vm_lava_attack_point2(36, 0, 0); 0;}));
+     [01;35m[K^[m[K
+[01m[Ktoy.c:67:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(37, 66, 0); unsigned i;
+     [01;35m[K^[m[K
+[01m[Ktoy.c:68:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(38, 67, 0); for (i = 0; i < head.num_recs; i++) {
+     [01;35m[K^[m[K
+[01m[Ktoy.c:69:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(39, 68, 0); file_entry *ent = parse_record(f + ({vm_lava_attack_point2(40, 0, 0); 0;}));
+         [01;35m[K^[m[K
+[01m[Ktoy.c:70:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+         [01;35m[K;[m[K vm_lava_pri_query_point(41, 69, 0); consume_record(ent + ({vm_lava_attack_point2(42, 0, 0); 0;}));
+         [01;35m[K^[m[K
+[01m[Ktoy.c:72:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvisibility[m[K’ attribute ignored [[01;35m[K-Wattributes[m[K]
+     [01;35m[K;[m[K vm_lava_pri_query_point(43, 71, 0); return 0;
+     [01;35m[K^[m[K
+cc -gdwarf-2 -DHAVE_CONFIG_H -g -fPIC -DPIC -O0 -o toy toy.o
+cd /home/lmy/tool/lava-master/target_injections/toy/toy && rm -rf lava-install
+cd /home/lmy/tool/lava-master/target_injections/toy/toy && make install
+mkdir -p /home/lmy/tool/lava-master/target_injections/toy/toy/lava-install/bin
+cp toy /home/lmy/tool/lava-master/target_injections/toy/toy/lava-install/bin
+make complete 3.45 seconds

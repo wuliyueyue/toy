@@ -1,0 +1,490 @@
+/home/lmy/tool/lava-master/scripts/add_queries.sh toy
+No ATP_Type specified.  Defaulting to all.
+[32m[queries][0m [1mEntering /home/lmy/tool/lava-master/target_injections/toy.[0m
+[32m[queries][0m [1mUntarring /home/lmy/tool/lava-master/target_bins/toy-pre.tar.gz...[0m
+[32m[queries][0m [1mEntering toy.[0m
+[32m[queries][0m [1mCreating git repo.[0m
+Initialized empty Git repository in /home/lmy/tool/lava-master/target_injections/toy/toy/.git/
+[master (root-commit) 34c907e] Unmodified source.
+ 3 files changed, 83 insertions(+)
+ create mode 100644 .Makefile.swp
+ create mode 100644 Makefile
+ create mode 100644 toy.c
+[32m[queries][0m [1mConfiguring...[0m
+[32m[queries][0m [1mMaking with btrace...[0m
+/home/lmy/tool/lava-master/tools/btrace/sw-btrace make CFLAGS+=-gdwarf-2
+cc -gdwarf-2   -c -o toy.o toy.c
+cc -gdwarf-2 -DHAVE_CONFIG_H -g -fPIC -DPIC -O0 -o toy toy.o
+[32m[queries][0m [1mInstalling...[0m
+make: Nothing to be done for 'all'.
+[32m[queries][0m [1mCreating compile_commands.json...[0m
+[master 1ff9ab4] Add compile_commands.json.
+ 1 file changed, 7 insertions(+)
+ create mode 100644 compile_commands.json
+[32m[queries][0m [1mCopying include files...[0m
+   /home/lmy/tool/lava-master/target_injections/toy/toy
+[32m[queries][0m [1mFigure out functions[0m
+outfilename = [/home/lmy/tool/lava-master/target_injections/toy/toy/toy.c.fn]
+Creating fninstr [/home/lmy/tool/lava-master/target_injections/toy/fninstr]
+	with command: "python /home/lmy/tool/lava-master/scripts/fninstr.py -d -o /home/lmy/tool/lava-master/target_injections/toy/fninstr /home/lmy/tool/lava-master/target_injections/toy/toy/toy.c.fn"
+FILE [/home/lmy/tool/lava-master/target_injections/toy/toy/toy.c.fn] 
+203 fn names in prots
+207 fn names in prots+fundefs
+207 fn names in prots+fundefs+calls
+207 fn names in prots+fundefs+calls+callargs
+Won't instrument fseek (data_flow) since we don't have body
+Won't instrument a64l (data_flow) since we don't have body
+Won't instrument wctomb (data_flow) since we don't have body
+Won't instrument strtouq (data_flow) since we don't have body
+Won't instrument _IO_putc (data_flow) since we don't have body
+Won't instrument putchar_unlocked (data_flow) since we don't have body
+Won't instrument strtoul (data_flow) since we don't have body
+Won't instrument ferror_unlocked (data_flow) since we don't have body
+Won't instrument fflush (data_flow) since we don't have body
+Won't instrument qecvt_r (data_flow) since we don't have body
+Won't instrument atoll (data_flow) since we don't have body
+Won't instrument strtol (data_flow) since we don't have body
+Won't instrument fputc (data_flow) since we don't have body
+Won't instrument __underflow (data_flow) since we don't have body
+Won't instrument strtod (data_flow) since we don't have body
+Won't instrument fwrite (data_flow) since we don't have body
+Won't instrument strtof (data_flow) since we don't have body
+Won't instrument _IO_ftrylockfile (data_flow) since we don't have body
+Won't instrument mkstemps (data_flow) since we don't have body
+Won't instrument fputs (data_flow) since we don't have body
+Won't instrument lrand48_r (data_flow) since we don't have body
+Won't instrument tmpnam (data_flow) since we don't have body
+Won't instrument feof_unlocked (data_flow) since we don't have body
+Instr candidate main has body
+Won't instrument getline (data_flow) since we don't have body
+Won't instrument _IO_padn (data_flow) since we don't have body
+Won't instrument l64a (data_flow) since we don't have body
+Won't instrument rand_r (data_flow) since we don't have body
+Won't instrument fclose (data_flow) since we don't have body
+Won't instrument _IO_sgetn (data_flow) since we don't have body
+Won't instrument drand48 (data_flow) since we don't have body
+Won't instrument srandom_r (data_flow) since we don't have body
+Won't instrument getloadavg (data_flow) since we don't have body
+Won't instrument gnu_dev_minor (data_flow) since we don't have body
+Won't instrument fileno (data_flow) since we don't have body
+Instr candidate parse_header has body
+Won't instrument perror (data_flow) since we don't have body
+Won't instrument renameat (data_flow) since we don't have body
+Won't instrument fscanf (data_flow) since we don't have body
+Won't instrument gcvt (data_flow) since we don't have body
+Won't instrument seed48 (data_flow) since we don't have body
+Won't instrument remove (data_flow) since we don't have body
+Won't instrument mblen (data_flow) since we don't have body
+Won't instrument random (data_flow) since we don't have body
+Won't instrument _IO_vfprintf (data_flow) since we don't have body
+Won't instrument freopen (data_flow) since we don't have body
+Won't instrument div (data_flow) since we don't have body
+Won't instrument getw (data_flow) since we don't have body
+Won't instrument fread_unlocked (data_flow) since we don't have body
+Won't instrument gnu_dev_makedev (data_flow) since we don't have body
+Won't instrument fputc_unlocked (data_flow) since we don't have body
+Won't instrument nrand48_r (data_flow) since we don't have body
+Won't instrument tempnam (data_flow) since we don't have body
+Won't instrument tmpfile (data_flow) since we don't have body
+Won't instrument vsscanf (data_flow) since we don't have body
+Won't instrument lldiv (data_flow) since we don't have body
+Won't instrument mkdtemp (data_flow) since we don't have body
+Won't instrument snprintf (data_flow) since we don't have body
+Won't instrument fgetc (data_flow) since we don't have body
+Won't instrument pclose (data_flow) since we don't have body
+Won't instrument strtoull (data_flow) since we don't have body
+Won't instrument llabs (data_flow) since we don't have body
+Won't instrument getdelim (data_flow) since we don't have body
+Won't instrument qgcvt (data_flow) since we don't have body
+Won't instrument atexit (data_flow) since we don't have body
+Won't instrument quick_exit (data_flow) since we don't have body
+Won't instrument fileno_unlocked (data_flow) since we don't have body
+Won't instrument fgets (data_flow) since we don't have body
+Won't instrument __ctype_get_mb_cur_max (data_flow) since we don't have body
+Won't instrument jrand48 (data_flow) since we don't have body
+Won't instrument ctermid (data_flow) since we don't have body
+Won't instrument mktemp (data_flow) since we don't have body
+Won't instrument initstate_r (data_flow) since we don't have body
+Won't instrument _IO_feof (data_flow) since we don't have body
+Instr candidate parse_record has body
+Won't instrument getchar_unlocked (data_flow) since we don't have body
+Won't instrument fgetc_unlocked (data_flow) since we don't have body
+Won't instrument fgetpos (data_flow) since we don't have body
+Won't instrument fsetpos (data_flow) since we don't have body
+Won't instrument ftell (data_flow) since we don't have body
+Won't instrument abs (data_flow) since we don't have body
+Won't instrument exit (data_flow) since we don't have body
+Won't instrument sprintf (data_flow) since we don't have body
+Won't instrument vscanf (data_flow) since we don't have body
+Won't instrument vdprintf (data_flow) since we don't have body
+Won't instrument mbstowcs (data_flow) since we don't have body
+Won't instrument __getdelim (data_flow) since we don't have body
+Won't instrument __overflow (data_flow) since we don't have body
+Won't instrument ferror (data_flow) since we don't have body
+Won't instrument free (data_flow) since we don't have body
+Won't instrument labs (data_flow) since we don't have body
+Won't instrument open_memstream (data_flow) since we don't have body
+Won't instrument setstate_r (data_flow) since we don't have body
+Won't instrument tmpnam_r (data_flow) since we don't have body
+Won't instrument seed48_r (data_flow) since we don't have body
+Won't instrument fseeko (data_flow) since we don't have body
+Won't instrument __uflow (data_flow) since we don't have body
+Won't instrument puts (data_flow) since we don't have body
+Won't instrument vsprintf (data_flow) since we don't have body
+Won't instrument popen (data_flow) since we don't have body
+Won't instrument _IO_ferror (data_flow) since we don't have body
+Won't instrument bsearch (data_flow) since we don't have body
+Won't instrument ldiv (data_flow) since we don't have body
+Won't instrument srandom (data_flow) since we don't have body
+Won't instrument rand (data_flow) since we don't have body
+Won't instrument _IO_flockfile (data_flow) since we don't have body
+Won't instrument fflush_unlocked (data_flow) since we don't have body
+Won't instrument realloc (data_flow) since we don't have body
+Won't instrument mbtowc (data_flow) since we don't have body
+Won't instrument fread (data_flow) since we don't have body
+Won't instrument alloca (data_flow) since we don't have body
+Won't instrument qecvt (data_flow) since we don't have body
+Won't instrument _IO_seekoff (data_flow) since we don't have body
+Won't instrument printf (data_flow) since we don't have body
+Won't instrument fmemopen (data_flow) since we don't have body
+Won't instrument fopen (data_flow) since we don't have body
+Won't instrument select (data_flow) since we don't have body
+Won't instrument getchar (data_flow) since we don't have body
+Won't instrument putw (data_flow) since we don't have body
+Won't instrument getsubopt (data_flow) since we don't have body
+Won't instrument rpmatch (data_flow) since we don't have body
+Won't instrument putenv (data_flow) since we don't have body
+Won't instrument fdopen (data_flow) since we don't have body
+Won't instrument clearerr_unlocked (data_flow) since we don't have body
+Won't instrument scanf (data_flow) since we don't have body
+Won't instrument aligned_alloc (data_flow) since we don't have body
+Won't instrument qsort (data_flow) since we don't have body
+Won't instrument system (data_flow) since we don't have body
+Won't instrument gnu_dev_major (data_flow) since we don't have body
+Won't instrument putc (data_flow) since we don't have body
+Won't instrument dprintf (data_flow) since we don't have body
+Won't instrument fcvt_r (data_flow) since we don't have body
+Won't instrument ecvt_r (data_flow) since we don't have body
+Instr candidate consume_record has body
+Won't instrument mrand48 (data_flow) since we don't have body
+Won't instrument vprintf (data_flow) since we don't have body
+Won't instrument setbuffer (data_flow) since we don't have body
+Won't instrument setlinebuf (data_flow) since we don't have body
+Won't instrument getenv (data_flow) since we don't have body
+Won't instrument strtold (data_flow) since we don't have body
+Won't instrument atoi (data_flow) since we don't have body
+Won't instrument _IO_funlockfile (data_flow) since we don't have body
+Won't instrument atol (data_flow) since we don't have body
+Won't instrument putchar (data_flow) since we don't have body
+Won't instrument _Exit (data_flow) since we don't have body
+Won't instrument atof (data_flow) since we don't have body
+Won't instrument erand48_r (data_flow) since we don't have body
+Won't instrument erand48 (data_flow) since we don't have body
+Won't instrument _IO_getc (data_flow) since we don't have body
+Won't instrument lcong48_r (data_flow) since we don't have body
+Won't instrument ftrylockfile (data_flow) since we don't have body
+Won't instrument getc_unlocked (data_flow) since we don't have body
+Won't instrument strtoq (data_flow) since we don't have body
+Won't instrument _IO_vfscanf (data_flow) since we don't have body
+Won't instrument qfcvt (data_flow) since we don't have body
+Won't instrument ungetc (data_flow) since we don't have body
+Won't instrument fprintf (data_flow) since we don't have body
+Won't instrument clearenv (data_flow) since we don't have body
+Won't instrument rename (data_flow) since we don't have body
+Won't instrument vsnprintf (data_flow) since we don't have body
+Won't instrument malloc (data_flow) since we don't have body
+Won't instrument _IO_peekc_locked (data_flow) since we don't have body
+Won't instrument sscanf (data_flow) since we don't have body
+Won't instrument cfree (data_flow) since we don't have body
+Won't instrument srand (data_flow) since we don't have body
+Won't instrument ftello (data_flow) since we don't have body
+Won't instrument fwrite_unlocked (data_flow) since we don't have body
+Won't instrument pselect (data_flow) since we don't have body
+Won't instrument jrand48_r (data_flow) since we don't have body
+Won't instrument abort (data_flow) since we don't have body
+Won't instrument initstate (data_flow) since we don't have body
+Won't instrument strtoll (data_flow) since we don't have body
+Won't instrument _IO_seekpos (data_flow) since we don't have body
+Won't instrument feof (data_flow) since we don't have body
+Won't instrument clearerr (data_flow) since we don't have body
+Won't instrument lcong48 (data_flow) since we don't have body
+Won't instrument lrand48 (data_flow) since we don't have body
+Won't instrument getc (data_flow) since we don't have body
+Won't instrument qfcvt_r (data_flow) since we don't have body
+Won't instrument setenv (data_flow) since we don't have body
+Won't instrument rewind (data_flow) since we don't have body
+Won't instrument on_exit (data_flow) since we don't have body
+Won't instrument mkstemp (data_flow) since we don't have body
+Won't instrument putc_unlocked (data_flow) since we don't have body
+Won't instrument vfscanf (data_flow) since we don't have body
+Won't instrument setstate (data_flow) since we don't have body
+Won't instrument flockfile (data_flow) since we don't have body
+Won't instrument realpath (data_flow) since we don't have body
+Won't instrument _IO_free_backup_area (data_flow) since we don't have body
+Won't instrument unsetenv (data_flow) since we don't have body
+Won't instrument mrand48_r (data_flow) since we don't have body
+Won't instrument srand48_r (data_flow) since we don't have body
+Won't instrument random_r (data_flow) since we don't have body
+Won't instrument valloc (data_flow) since we don't have body
+Won't instrument calloc (data_flow) since we don't have body
+Won't instrument setbuf (data_flow) since we don't have body
+Won't instrument at_quick_exit (data_flow) since we don't have body
+Won't instrument funlockfile (data_flow) since we don't have body
+Won't instrument srand48 (data_flow) since we don't have body
+Won't instrument wcstombs (data_flow) since we don't have body
+Won't instrument drand48_r (data_flow) since we don't have body
+Won't instrument nrand48 (data_flow) since we don't have body
+Won't instrument setvbuf (data_flow) since we don't have body
+Won't instrument posix_memalign (data_flow) since we don't have body
+Won't instrument fcvt (data_flow) since we don't have body
+Won't instrument ecvt (data_flow) since we don't have body
+Won't instrument vfprintf (data_flow) since we don't have body
+instrflags=0: count=4
+Intrumenting fun [main]
+Intrumenting fun [parse_record]
+Intrumenting fun [consume_record]
+Intrumenting fun [parse_header]
+[32m[queries][0m [1mInserting queries for dataflow[0m
+Starting lavaTool...
+parsing white list /home/lmy/tool/lava-master/target_injections/toy/fninstr
+	 np= NOFILENAME npp=main
+white list entry: file = [NOFILENAME] func = [main]
+	 np= NOFILENAME npp=parse_record
+white list entry: file = [NOFILENAME] func = [parse_record]
+	 np= NOFILENAME npp=consume_record
+white list entry: file = [NOFILENAME] func = [consume_record]
+	 np= NOFILENAME npp=parse_header
+white list entry: file = [NOFILENAME] func = [parse_header]
+whitelist is 4 entries
+about to call Tool.run 
+*** handleBeginSource for: toy.c
+Inserting macros and lava_set/get or dataflow at top of file
+PriQueryPointHandler: Containing function is in whitelist parse_header : toy.c
+PriQueryPointHandler handle: ok to instrument parse_header
+Have a query point @ toy.c:31:5:32:15!
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:20:31:20
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:25:31:43
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:46:31:46
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:49:31:49
+Inserting expression attack (AttackExpression).
+start: toy.c:32:9
+end:   toy.c:32:15
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:32:14:32:14
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist parse_header : toy.c
+PriQueryPointHandler handle: ok to instrument parse_header
+Have a query point @ toy.c:33:5:34:15!
+start: toy.c:34:9
+end:   toy.c:34:15
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:34:14:34:14
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:38:5:38:64!
+start: toy.c:38:38
+end:   toy.c:38:63
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [malloc]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:38:45:38:62
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:39:5:40:15!
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:20:39:20
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:25:39:42
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:45:39:45
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:48:39:48
+Inserting expression attack (AttackExpression).
+start: toy.c:40:9
+end:   toy.c:40:15
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:40:14:40:14
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:41:5:41:12!
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:45:5:45:41!
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:46:5:55:5!
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:47:9:47:47!
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:50:9:50:51!
+start: toy.c:50:9
+end:   toy.c:50:51
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:50:34:50:44
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:53:9:53:46!
+start: toy.c:53:9
+end:   toy.c:53:46
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:53:37:53:42
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:54:9:54:15!
+start: toy.c:54:9
+end:   toy.c:54:15
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:54:14:54:14
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:56:5:56:13!
+start: toy.c:56:5
+end:   toy.c:56:13
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [free]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:56:10:56:10
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:60:5:60:35!
+start: toy.c:60:15
+end:   toy.c:60:34
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [fopen]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:60:21:60:27
+Inserting expression attack (AttackExpression).
+MemoryAccessHandler: Containing function is in whitelist main : toy.c
+MemoryAccessHandler: ok to instrument main
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:61:5:61:21!
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:63:5:63:26!
+start: toy.c:63:5
+end:   toy.c:63:26
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_header]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:63:18:63:18
+Inserting expression attack (AttackExpression).
+start: toy.c:63:5
+end:   toy.c:63:26
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_header]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:63:21:63:22
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:64:5:64:50!
+start: toy.c:64:5
+end:   toy.c:64:50
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:64:36:64:41
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:66:5:66:15!
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:67:5:70:5!
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:68:9:68:42!
+start: toy.c:68:27
+end:   toy.c:68:41
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_record]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:68:40:68:40
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:69:9:69:27!
+start: toy.c:69:9
+end:   toy.c:69:27
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [consume_record]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:69:24:69:24
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:71:5:71:12!
+*** handleEndSource
+back from calling Tool.run 
+num taint queries added 21
+num atp queries added 23
+Applying replacements to /home/lmy/tool/lava-master/target_injections/toy/toy
+~/tool/lava-master/target_injections/toy/toy ~/tool/lava-master/target_injections/toy
+~/tool/lava-master/target_injections/toy
+[32m[queries][0m [1mDone inserting queries. Time to make and run actuate.py on a 64-BIT machine![0m
+add queries complete 1.76 seconds

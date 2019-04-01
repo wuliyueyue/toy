@@ -1,0 +1,54 @@
+dropdb --if-exists -U postgres toy_lmy
+createdb -U postgres toy_lmy || true
+psql -d toy_lmy -f /home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql -U postgres
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:5: NOTICE:  table "call" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:7: NOTICE:  table "sourcefunction" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:9: NOTICE:  table "run" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:11: NOTICE:  table "build_bugs" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:13: NOTICE:  table "build" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:15: NOTICE:  table "bug" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:17: NOTICE:  table "attackpoint" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:19: NOTICE:  table "duabytes" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:21: NOTICE:  table "dua_viable_bytes" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:23: NOTICE:  table "dua" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:25: NOTICE:  table "labelset" does not exist, skipping
+DROP TABLE
+psql:/home/lmy/tool/lava-master/tools/lavaODB/generated/lava.sql:27: NOTICE:  table "sourcelval" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+echo dbwipe complete
+dbwipe complete

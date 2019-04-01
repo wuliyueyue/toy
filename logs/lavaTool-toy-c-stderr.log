@@ -1,0 +1,1942 @@
+parsing white list /home/lmy/tool/lava-master/target_injections/toy/fninstr
+	 np= NOFILENAME npp=main
+white list entry: file = [NOFILENAME] func = [main]
+	 np= NOFILENAME npp=parse_record
+white list entry: file = [NOFILENAME] func = [parse_record]
+	 np= NOFILENAME npp=consume_record
+white list entry: file = [NOFILENAME] func = [consume_record]
+	 np= NOFILENAME npp=parse_header
+white list entry: file = [NOFILENAME] func = [parse_header]
+whitelist is 4 entries
+LavaBugList: [24,34,176,223,317,338,450,451,470,504,506,514,518,536,583,639,650,654,656,662,669,685,688,893,916,922,963,1268,1325,1338,1375,1444,1450,1530,1541,1565,1613,1617,1619,1643,1654,1668,1698,1751,1837,2034,2062,2101,2231,2273]
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:68:9:68:42
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:67:5:70:5
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:67:5:70:5
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:66:5:66:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:38:5:38:64
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:64:5:64:50
+    Mark siphon at toy.c:67:5:70:5
+    Mark siphon at toy.c:67:5:70:5
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:66:5:66:15
+    Mark siphon at toy.c:67:5:70:5
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:33:5:34:15
+    Mark siphon at toy.c:68:9:68:42
+    Mark siphon at toy.c:39:5:40:15
+    Mark siphon at toy.c:56:5:56:13
+    Mark siphon at toy.c:39:5:40:15
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:39:5:40:15
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:47:9:47:47
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:47:9:47:47
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:69:9:69:27
+    Mark siphon at toy.c:41:5:41:12
+    Mark siphon at toy.c:69:9:69:27
+    Mark siphon at toy.c:45:5:45:41
+    Mark siphon at toy.c:66:5:66:15
+    Mark siphon at toy.c:38:5:38:64
+    Mark siphon at toy.c:46:5:55:5
+    Mark siphon at toy.c:39:5:40:15
+    Mark siphon at toy.c:50:9:50:51
+about to call Tool.run 
+*** handleBeginSource for: toy.c
+#ifdef LAVA_LOGGING
+#define LAVALOG(bugid, x, trigger)  ({(trigger && fprintf(stderr, "\nLAVALOG: %d: %s:%d\n", bugid, __FILE__, __LINE__)), (x);})
+#endif
+#ifdef FULL_LAVA_LOGGING
+#define LAVALOG(bugid, x, trigger)  ({(trigger && fprintf(stderr, "\nLAVALOG: %d: %s:%d\n", bugid, __FILE__, __LINE__), (!trigger && fprintf(stderr, "\nLAVALOG_MISS: %d: %s:%d\n", bugid, __FILE__, __LINE__))) && fflush(0), (x);})
+#endif
+#ifndef LAVALOG
+#define LAVALOG(y,x,z)  (x)
+#endif
+#ifdef DUA_LOGGING
+#define DFLOG(idx, val)  ({fprintf(stderr, "\nDFLOG:%d=%d: %s:%d\n", idx, val, __FILE__, __LINE__) && fflush(0), data_flow[idx]=val;})
+#else
+#define DFLOG(idx, val) {data_flow[idx]=val;}
+#endif
+in file toy.c
+Inserting macros and lava_set/get or dataflow at top of file
+typedefdecl  : [Invalid
+... is invalid
+typedefdecl  : [Invalid
+... is invalid
+typedefdecl  : [Invalid
+... is invalid
+typedefdecl  : [typedef __SIZE_TYPE__ size_t
+typedefdecl  : [typedef unsigned char __u_char
+typedefdecl  : [typedef unsigned short int __u_short
+typedefdecl  : [typedef unsigned int __u_int
+typedefdecl  : [typedef unsigned long int __u_long
+typedefdecl  : [typedef signed char __int8_t
+typedefdecl  : [typedef unsigned char __uint8_t
+typedefdecl  : [typedef signed short int __int16_t
+typedefdecl  : [typedef unsigned short int __uint16_t
+typedefdecl  : [typedef signed int __int32_t
+typedefdecl  : [typedef unsigned int __uint32_t
+typedefdecl  : [typedef signed long int __int64_t
+typedefdecl  : [typedef unsigned long int __uint64_t
+typedefdecl  : [typedef long int __quad_t
+typedefdecl  : [typedef unsigned long int __u_quad_t
+typedefdecl  : [__STD_TYPE __DEV_T_TYPE __dev_t
+typedefdecl  : [__STD_TYPE __UID_T_TYPE __uid_t
+typedefdecl  : [__STD_TYPE __GID_T_TYPE __gid_t
+typedefdecl  : [__STD_TYPE __INO_T_TYPE __ino_t
+typedefdecl  : [__STD_TYPE __INO64_T_TYPE __ino64_t
+typedefdecl  : [__STD_TYPE __MODE_T_TYPE __mode_t
+typedefdecl  : [__STD_TYPE __NLINK_T_TYPE __nlink_t
+typedefdecl  : [__STD_TYPE __OFF_T_TYPE __off_t
+typedefdecl  : [__STD_TYPE __OFF64_T_TYPE __off64_t
+typedefdecl  : [__STD_TYPE __PID_T_TYPE __pid_t
+fielddecl  : []
+typedefdecl  : [__STD_TYPE __FSID_T_TYPE __fsid_t
+typedefdecl  : [__STD_TYPE __CLOCK_T_TYPE __clock_t
+typedefdecl  : [__STD_TYPE __RLIM_T_TYPE __rlim_t
+typedefdecl  : [__STD_TYPE __RLIM64_T_TYPE __rlim64_t
+typedefdecl  : [__STD_TYPE __ID_T_TYPE __id_t
+typedefdecl  : [__STD_TYPE __TIME_T_TYPE __time_t
+typedefdecl  : [__STD_TYPE __USECONDS_T_TYPE __useconds_t
+typedefdecl  : [__STD_TYPE __SUSECONDS_T_TYPE __suseconds_t
+typedefdecl  : [__STD_TYPE __DADDR_T_TYPE __daddr_t
+typedefdecl  : [__STD_TYPE __KEY_T_TYPE __key_t
+typedefdecl  : [__STD_TYPE __CLOCKID_T_TYPE __clockid_t
+typedefdecl  : [__STD_TYPE __TIMER_T_TYPE __timer_t
+typedefdecl  : [__STD_TYPE __BLKSIZE_T_TYPE __blksize_t
+typedefdecl  : [__STD_TYPE __BLKCNT_T_TYPE __blkcnt_t
+typedefdecl  : [__STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t
+typedefdecl  : [__STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t
+typedefdecl  : [__STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t
+typedefdecl  : [__STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t
+typedefdecl  : [__STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t
+typedefdecl  : [__STD_TYPE __FSWORD_T_TYPE __fsword_t
+typedefdecl  : [__STD_TYPE __SSIZE_T_TYPE __ssize_t
+typedefdecl  : [__STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t
+typedefdecl  : [__STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t
+typedefdecl  : [typedef __off64_t __loff_t
+typedefdecl  : [typedef __quad_t *__qaddr_t
+typedefdecl  : [typedef char *__caddr_t
+typedefdecl  : [__STD_TYPE __SWORD_TYPE __intptr_t
+typedefdecl  : [__STD_TYPE __U32_TYPE __socklen_t
+typedefdecl  : [typedef struct _IO_FILE FILE
+typedefdecl  : [typedef struct _IO_FILE __FILE
+fielddecl  : [int __count]
+fielddecl  : [__WINT_TYPE__ __wch]
+fielddecl  : [char __wchb[4]]
+fielddecl  : [union
+  {
+# ifdef __WINT_TYPE__
+    __WINT_TYPE__ __wch;
+# else
+    wint_t __wch;
+# endif
+    char __wchb[4];
+  } __value]
+typedefdecl  : [typedef struct
+{
+  int __count;
+  union
+  {
+# ifdef __WINT_TYPE__
+    __WINT_TYPE__ __wch;
+# else
+    wint_t __wch;
+# endif
+    char __wchb[4];
+  } __value;		/* Value so far.  */
+} __mbstate_t
+fielddecl  : [__off_t __pos]
+fielddecl  : [__mbstate_t __state]
+typedefdecl  : [typedef struct
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} _G_fpos_t
+fielddecl  : [__off64_t __pos]
+fielddecl  : [__mbstate_t __state]
+typedefdecl  : [typedef struct
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} _G_fpos64_t
+typedefdecl  : [typedef __builtin_va_list va_list
+typedefdecl  : [typedef __builtin_va_list __gnuc_va_list
+typedefdecl  : [typedef void _IO_lock_t
+fielddecl  : [struct _IO_marker *_next]
+fielddecl  : [struct _IO_FILE *_sbuf]
+fielddecl  : [int _pos]
+fielddecl  : [int _flags]
+fielddecl  : [char* _IO_read_ptr]
+fielddecl  : [char* _IO_read_end]
+fielddecl  : [char* _IO_read_base]
+fielddecl  : [char* _IO_write_base]
+fielddecl  : [char* _IO_write_ptr]
+fielddecl  : [char* _IO_write_end]
+fielddecl  : [char* _IO_buf_base]
+fielddecl  : [char* _IO_buf_end]
+fielddecl  : [char *_IO_save_base]
+fielddecl  : [char *_IO_backup_base]
+fielddecl  : [char *_IO_save_end]
+fielddecl  : [struct _IO_marker *_markers]
+fielddecl  : [struct _IO_FILE *_chain]
+fielddecl  : [int _fileno]
+fielddecl  : [int _flags2]
+fielddecl  : [_IO_off_t _old_offset]
+fielddecl  : [unsigned short _cur_column]
+fielddecl  : [signed char _vtable_offset]
+fielddecl  : [char _shortbuf[1]]
+fielddecl  : [_IO_lock_t *_lock]
+fielddecl  : [_IO_off64_t _offset]
+fielddecl  : [void *__pad1]
+fielddecl  : [void *__pad2]
+fielddecl  : [void *__pad3]
+fielddecl  : [void *__pad4]
+fielddecl  : [size_t __pad5]
+fielddecl  : [int _mode]
+fielddecl  : [char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)]]
+typedefdecl  : [typedef struct _IO_FILE _IO_FILE
+vardecl  : [extern struct _IO_FILE_plus _IO_2_1_stdin_]
+vardecl  : [extern struct _IO_FILE_plus _IO_2_1_stdout_]
+vardecl  : [extern struct _IO_FILE_plus _IO_2_1_stderr_]
+typedefdecl  : [typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes)
+vardecl  : [void *__cookie]
+vardecl  : [char *__buf]
+vardecl  : [size_t __nbytes]
+typedefdecl  : [typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
+				 size_t __n)
+vardecl  : [void *__cookie]
+vardecl  : [const char *__buf]
+vardecl  : [size_t __n]
+typedefdecl  : [typedef int __io_seek_fn (void *__cookie, _IO_off64_t *__pos, int __w)
+vardecl  : [void *__cookie]
+vardecl  : [_IO_off64_t *__pos]
+vardecl  : [int __w]
+typedefdecl  : [typedef int __io_close_fn (void *__cookie)
+vardecl  : [void *__cookie]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist __underflow : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist __uflow : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist __overflow : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [int]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_getc : /usr/include/libio.h
+vardecl  : [_IO_FILE *__fp]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_putc : /usr/include/libio.h
+vardecl  : [int __c]
+vardecl  : [_IO_FILE *__fp]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_feof : /usr/include/libio.h
+vardecl  : [_IO_FILE *__fp]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_ferror : /usr/include/libio.h
+vardecl  : [_IO_FILE *__fp]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_peekc_locked : /usr/include/libio.h
+vardecl  : [_IO_FILE *__fp]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_flockfile : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_funlockfile : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_ftrylockfile : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_vfscanf : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [const char *]
+vardecl  : [_IO_va_list]
+vardecl  : [int *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_vfprintf : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [const char *]
+vardecl  : [_IO_va_list]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_padn : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [int]
+vardecl  : [_IO_ssize_t]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_sgetn : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [void *]
+vardecl  : [_IO_size_t]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_seekoff : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [_IO_off64_t]
+vardecl  : [int]
+vardecl  : [int]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_seekpos : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+vardecl  : [_IO_off64_t]
+vardecl  : [int]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _IO_free_backup_area : /usr/include/libio.h
+vardecl  : [_IO_FILE *]
+typedefdecl  : [typedef _G_va_list va_list
+typedefdecl  : [typedef __off_t off_t
+typedefdecl  : [typedef __ssize_t ssize_t
+typedefdecl  : [typedef _G_fpos_t fpos_t
+vardecl  : [extern struct _IO_FILE *stdin]
+vardecl  : [extern struct _IO_FILE *stdout]
+vardecl  : [extern struct _IO_FILE *stderr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist remove : /usr/include/stdio.h
+vardecl  : [const char *__filename]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist rename : /usr/include/stdio.h
+vardecl  : [const char *__old]
+vardecl  : [const char *__new]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist renameat : /usr/include/stdio.h
+vardecl  : [int __oldfd]
+vardecl  : [const char *__old]
+vardecl  : [int __newfd]
+vardecl  : [const char *__new]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist tmpfile : /usr/include/stdio.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist tmpnam : /usr/include/stdio.h
+vardecl  : [char *__s]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist tmpnam_r : /usr/include/stdio.h
+vardecl  : [char *__s]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist tempnam : /usr/include/stdio.h
+vardecl  : [const char *__dir]
+vardecl  : [const char *__pfx]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fclose : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fflush : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fflush_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fopen : /usr/include/stdio.h
+vardecl  : [const char *__restrict __filename]
+vardecl  : [const char *__restrict __modes]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist freopen : /usr/include/stdio.h
+vardecl  : [const char *__restrict __filename]
+vardecl  : [const char *__restrict __modes]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fdopen : /usr/include/stdio.h
+vardecl  : [int __fd]
+vardecl  : [const char *__modes]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fmemopen : /usr/include/stdio.h
+vardecl  : [void *__s]
+vardecl  : [size_t __len]
+vardecl  : [const char *__modes]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist open_memstream : /usr/include/stdio.h
+vardecl  : [char **__bufloc]
+vardecl  : [size_t *__sizeloc]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setbuf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [char *__restrict __buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setvbuf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [char *__restrict __buf]
+vardecl  : [int __modes]
+vardecl  : [size_t __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setbuffer : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [char *__restrict __buf]
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setlinebuf : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fprintf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist printf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist printf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist sprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist sprintf : /usr/include/stdio.h
+vardecl  : [char *__restrict __s]
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vfprintf : /usr/include/stdio.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vfprintf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __s]
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vprintf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsprintf : /usr/include/stdio.h
+vardecl  : [char *__restrict __s]
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist snprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist snprintf : /usr/include/stdio.h
+vardecl  : [char *__restrict __s]
+vardecl  : [size_t __maxlen]
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsnprintf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsnprintf : /usr/include/stdio.h
+vardecl  : [char *__restrict __s]
+vardecl  : [size_t __maxlen]
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vdprintf : /usr/include/stdio.h
+vardecl  : [int __fd]
+vardecl  : [const char *__restrict __fmt]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist dprintf : /usr/include/stdio.h
+vardecl  : [int __fd]
+vardecl  : [const char *__restrict __fmt]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fscanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fscanf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist scanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist scanf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist sscanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist sscanf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __s]
+vardecl  : [const char *__restrict __format]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fscanf : 
+vardecl  : []
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist scanf : 
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist sscanf : 
+vardecl  : []
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vfscanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vfscanf : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __s]
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vscanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vscanf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsscanf : /usr/include/stdio.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsscanf : /usr/include/stdio.h
+vardecl  : [const char *__restrict __s]
+vardecl  : [const char *__restrict __format]
+vardecl  : [_G_va_list __arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vfscanf : 
+vardecl  : []
+vardecl  : []
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vscanf : 
+vardecl  : []
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist vsscanf : 
+vardecl  : []
+vardecl  : []
+vardecl  : []
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fgetc : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getc : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getchar : /usr/include/stdio.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getc_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getchar_unlocked : /usr/include/stdio.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fgetc_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fputc : /usr/include/stdio.h
+vardecl  : [int __c]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putc : /usr/include/stdio.h
+vardecl  : [int __c]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putchar : /usr/include/stdio.h
+vardecl  : [int __c]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fputc_unlocked : /usr/include/stdio.h
+vardecl  : [int __c]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putc_unlocked : /usr/include/stdio.h
+vardecl  : [int __c]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putchar_unlocked : /usr/include/stdio.h
+vardecl  : [int __c]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getw : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putw : /usr/include/stdio.h
+vardecl  : [int __w]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fgets : /usr/include/stdio.h
+vardecl  : [char *__restrict __s]
+vardecl  : [int __n]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist __getdelim : /usr/include/stdio.h
+vardecl  : [char **__restrict __lineptr]
+vardecl  : [size_t *__restrict __n]
+vardecl  : [int __delimiter]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getdelim : /usr/include/stdio.h
+vardecl  : [char **__restrict __lineptr]
+vardecl  : [size_t *__restrict __n]
+vardecl  : [int __delimiter]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getline : /usr/include/stdio.h
+vardecl  : [char **__restrict __lineptr]
+vardecl  : [size_t *__restrict __n]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fputs : /usr/include/stdio.h
+vardecl  : [const char *__restrict __s]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist puts : /usr/include/stdio.h
+vardecl  : [const char *__s]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ungetc : /usr/include/stdio.h
+vardecl  : [int __c]
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fread : /usr/include/stdio.h
+vardecl  : [void *__restrict __ptr]
+vardecl  : [size_t __size]
+vardecl  : [size_t __n]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fwrite : /usr/include/stdio.h
+vardecl  : [const void *__restrict __ptr]
+vardecl  : [size_t __size]
+vardecl  : [size_t __n]
+vardecl  : [FILE *__restrict __s]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fread_unlocked : /usr/include/stdio.h
+vardecl  : [void *__restrict __ptr]
+vardecl  : [size_t __size]
+vardecl  : [size_t __n]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fwrite_unlocked : /usr/include/stdio.h
+vardecl  : [const void *__restrict __ptr]
+vardecl  : [size_t __size]
+vardecl  : [size_t __n]
+vardecl  : [FILE *__restrict __stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fseek : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+vardecl  : [long int __off]
+vardecl  : [int __whence]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ftell : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist rewind : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fseeko : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+vardecl  : [__off_t __off]
+vardecl  : [int __whence]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ftello : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fgetpos : /usr/include/stdio.h
+vardecl  : [FILE *__restrict __stream]
+vardecl  : [fpos_t *__restrict __pos]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fsetpos : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+vardecl  : [const fpos_t *__pos]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist clearerr : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist feof : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ferror : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist clearerr_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist feof_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ferror_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist perror : /usr/include/stdio.h
+vardecl  : [const char *__s]
+vardecl  : [extern int sys_nerr]
+vardecl  : [extern const char *const sys_errlist[]]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fileno : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fileno_unlocked : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist popen : /usr/include/stdio.h
+vardecl  : [const char *__command]
+vardecl  : [const char *__modes]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist pclose : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ctermid : /usr/include/stdio.h
+vardecl  : [char *__s]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist flockfile : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ftrylockfile : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist funlockfile : /usr/include/stdio.h
+vardecl  : [FILE *__stream]
+typedefdecl  : [typedef __WCHAR_TYPE__ wchar_t
+typedefdecl  : [typedef enum
+{
+  P_ALL,		/* Wait for any child.  */
+  P_PID,		/* Wait for specified process.  */
+  P_PGID		/* Wait for members of process group.  */
+} idtype_t
+fielddecl  : [int quot]
+fielddecl  : [int rem]
+typedefdecl  : [typedef struct
+  {
+    int quot;			/* Quotient.  */
+    int rem;			/* Remainder.  */
+  } div_t
+fielddecl  : [long int quot]
+fielddecl  : [long int rem]
+typedefdecl  : [typedef struct
+  {
+    long int quot;		/* Quotient.  */
+    long int rem;		/* Remainder.  */
+  } ldiv_t
+fielddecl  : [long long int quot]
+fielddecl  : [long long int rem]
+typedefdecl  : [typedef struct
+  {
+    long long int quot;		/* Quotient.  */
+    long long int rem;		/* Remainder.  */
+  } lldiv_t
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist __ctype_get_mb_cur_max : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist atof : /usr/include/stdlib.h
+vardecl  : [const char *__nptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist atoi : /usr/include/stdlib.h
+vardecl  : [const char *__nptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist atol : /usr/include/stdlib.h
+vardecl  : [const char *__nptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist atoll : /usr/include/stdlib.h
+vardecl  : [const char *__nptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtod : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtof : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtold : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtol : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtoul : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtoq : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtouq : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtoll : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist strtoull : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __nptr]
+vardecl  : [char **__restrict __endptr]
+vardecl  : [int __base]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist l64a : /usr/include/stdlib.h
+vardecl  : [long int __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist a64l : /usr/include/stdlib.h
+vardecl  : [const char *__s]
+typedefdecl  : [typedef __u_char u_char
+typedefdecl  : [typedef __u_short u_short
+typedefdecl  : [typedef __u_int u_int
+typedefdecl  : [typedef __u_long u_long
+typedefdecl  : [typedef __quad_t quad_t
+typedefdecl  : [typedef __u_quad_t u_quad_t
+typedefdecl  : [typedef __fsid_t fsid_t
+typedefdecl  : [typedef __loff_t loff_t
+typedefdecl  : [typedef __ino_t ino_t
+typedefdecl  : [typedef __dev_t dev_t
+typedefdecl  : [typedef __gid_t gid_t
+typedefdecl  : [typedef __mode_t mode_t
+typedefdecl  : [typedef __nlink_t nlink_t
+typedefdecl  : [typedef __uid_t uid_t
+typedefdecl  : [typedef __pid_t pid_t
+typedefdecl  : [typedef __id_t id_t
+typedefdecl  : [typedef __daddr_t daddr_t
+typedefdecl  : [typedef __caddr_t caddr_t
+typedefdecl  : [typedef __key_t key_t
+typedefdecl  : [typedef __clock_t clock_t
+typedefdecl  : [typedef __time_t time_t
+typedefdecl  : [typedef __clockid_t clockid_t
+typedefdecl  : [typedef __timer_t timer_t
+typedefdecl  : [typedef unsigned long int ulong
+typedefdecl  : [typedef unsigned short int ushort
+typedefdecl  : [typedef unsigned int uint
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [
+typedefdecl  : [typedef int register_t
+typedefdecl  : [typedef int __sig_atomic_t
+fielddecl  : [unsigned long int __val[_SIGSET_NWORDS]]
+typedefdecl  : [typedef struct
+  {
+    unsigned long int __val[_SIGSET_NWORDS];
+  } __sigset_t
+typedefdecl  : [typedef __sigset_t sigset_t
+fielddecl  : [__time_t tv_sec]
+fielddecl  : [__syscall_slong_t tv_nsec]
+fielddecl  : [__time_t tv_sec]
+fielddecl  : [__suseconds_t tv_usec]
+typedefdecl  : [typedef __suseconds_t suseconds_t
+typedefdecl  : [typedef long int __fd_mask
+fielddecl  : [__fd_mask __fds_bits[__FD_SETSIZE / __NFDBITS]]
+typedefdecl  : [typedef struct
+  {
+    /* XPG4.2 requires this member name.  Otherwise avoid the name
+       from the global namespace.  */
+#ifdef __USE_XOPEN
+    __fd_mask fds_bits[__FD_SETSIZE / __NFDBITS];
+# define __FDS_BITS(set) ((set)->fds_bits)
+#else
+    __fd_mask __fds_bits[__FD_SETSIZE / __NFDBITS];
+# define __FDS_BITS(set) ((set)->__fds_bits)
+#endif
+  } fd_set
+typedefdecl  : [typedef __fd_mask fd_mask
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist select : /usr/include/sys/select.h
+vardecl  : [int __nfds]
+vardecl  : [fd_set *__restrict __readfds]
+vardecl  : [fd_set *__restrict __writefds]
+vardecl  : [fd_set *__restrict __exceptfds]
+vardecl  : [struct timeval *__restrict __timeout]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist pselect : /usr/include/sys/select.h
+vardecl  : [int __nfds]
+vardecl  : [fd_set *__restrict __readfds]
+vardecl  : [fd_set *__restrict __writefds]
+vardecl  : [fd_set *__restrict __exceptfds]
+vardecl  : [const struct timespec *__restrict __timeout]
+vardecl  : [const __sigset_t *__restrict __sigmask]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist gnu_dev_major : /usr/include/sys/sysmacros.h
+vardecl  : [unsigned long long int __dev]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist gnu_dev_minor : /usr/include/sys/sysmacros.h
+vardecl  : [unsigned long long int __dev]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist gnu_dev_makedev : /usr/include/sys/sysmacros.h
+vardecl  : [unsigned int __major]
+vardecl  : [unsigned int __minor]
+typedefdecl  : [typedef __blksize_t blksize_t
+typedefdecl  : [typedef __blkcnt_t blkcnt_t
+typedefdecl  : [typedef __fsblkcnt_t fsblkcnt_t
+typedefdecl  : [typedef __fsfilcnt_t fsfilcnt_t
+typedefdecl  : [typedef unsigned long int pthread_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_ATTR_T]]
+fielddecl  : [long int __align]
+typedefdecl  : [typedef union pthread_attr_t pthread_attr_t
+fielddecl  : [struct __pthread_internal_list *__prev]
+fielddecl  : [struct __pthread_internal_list *__next]
+typedefdecl  : [typedef struct __pthread_internal_list
+{
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t
+fielddecl  : [int __lock]
+fielddecl  : [unsigned int __count]
+fielddecl  : [int __owner]
+fielddecl  : [unsigned int __nusers]
+fielddecl  : [int __kind]
+fielddecl  : [short __spins]
+fielddecl  : [short __elision]
+fielddecl  : [__pthread_list_t __list]
+fielddecl  : [struct __pthread_mutex_s
+  {
+    int __lock;
+    unsigned int __count;
+    int __owner;
+#ifdef __x86_64__
+    unsigned int __nusers;
+#endif
+    /* KIND must stay at this position in the structure to maintain
+       binary compatibility.  */
+    int __kind;
+#ifdef __x86_64__
+    short __spins;
+    short __elision;
+    __pthread_list_t __list;
+# define __PTHREAD_MUTEX_HAVE_PREV	1
+/* Mutex __spins initializer used by PTHREAD_MUTEX_INITIALIZER.  */
+# define __PTHREAD_SPINS             0, 0
+#else
+    unsigned int __nusers;
+    __extension__ union
+    {
+      struct
+      {
+	short __espins;
+	short __elision;
+# define __spins __elision_data.__espins
+# define __elision __elision_data.__elision
+# define __PTHREAD_SPINS         { 0, 0 }
+      } __elision_data;
+      __pthread_slist_t __list;
+    };
+#endif
+  } __data]
+fielddecl  : [char __size[__SIZEOF_PTHREAD_MUTEX_T]]
+fielddecl  : [long int __align]
+typedefdecl  : [typedef union
+{
+  struct __pthread_mutex_s
+  {
+    int __lock;
+    unsigned int __count;
+    int __owner;
+#ifdef __x86_64__
+    unsigned int __nusers;
+#endif
+    /* KIND must stay at this position in the structure to maintain
+       binary compatibility.  */
+    int __kind;
+#ifdef __x86_64__
+    short __spins;
+    short __elision;
+    __pthread_list_t __list;
+# define __PTHREAD_MUTEX_HAVE_PREV	1
+/* Mutex __spins initializer used by PTHREAD_MUTEX_INITIALIZER.  */
+# define __PTHREAD_SPINS             0, 0
+#else
+    unsigned int __nusers;
+    __extension__ union
+    {
+      struct
+      {
+	short __espins;
+	short __elision;
+# define __spins __elision_data.__espins
+# define __elision __elision_data.__elision
+# define __PTHREAD_SPINS         { 0, 0 }
+      } __elision_data;
+      __pthread_slist_t __list;
+    };
+#endif
+  } __data;
+  char __size[__SIZEOF_PTHREAD_MUTEX_T];
+  long int __align;
+} pthread_mutex_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_MUTEXATTR_T]]
+fielddecl  : [int __align]
+typedefdecl  : [typedef union
+{
+  char __size[__SIZEOF_PTHREAD_MUTEXATTR_T];
+  int __align;
+} pthread_mutexattr_t
+fielddecl  : [int __lock]
+fielddecl  : [unsigned int __futex]
+fielddecl  : [unsigned long long int __total_seq]
+fielddecl  : [unsigned long long int __wakeup_seq]
+fielddecl  : [unsigned long long int __woken_seq]
+fielddecl  : [void *__mutex]
+fielddecl  : [unsigned int __nwaiters]
+fielddecl  : [unsigned int __broadcast_seq]
+fielddecl  : [struct
+  {
+    int __lock;
+    unsigned int __futex;
+    __extension__ unsigned long long int __total_seq;
+    __extension__ unsigned long long int __wakeup_seq;
+    __extension__ unsigned long long int __woken_seq;
+    void *__mutex;
+    unsigned int __nwaiters;
+    unsigned int __broadcast_seq;
+  } __data]
+fielddecl  : [char __size[__SIZEOF_PTHREAD_COND_T]]
+fielddecl  : [long long int __align]
+typedefdecl  : [typedef union
+{
+  struct
+  {
+    int __lock;
+    unsigned int __futex;
+    __extension__ unsigned long long int __total_seq;
+    __extension__ unsigned long long int __wakeup_seq;
+    __extension__ unsigned long long int __woken_seq;
+    void *__mutex;
+    unsigned int __nwaiters;
+    unsigned int __broadcast_seq;
+  } __data;
+  char __size[__SIZEOF_PTHREAD_COND_T];
+  __extension__ long long int __align;
+} pthread_cond_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_CONDATTR_T]]
+fielddecl  : [int __align]
+typedefdecl  : [typedef union
+{
+  char __size[__SIZEOF_PTHREAD_CONDATTR_T];
+  int __align;
+} pthread_condattr_t
+typedefdecl  : [typedef unsigned int pthread_key_t
+typedefdecl  : [typedef int pthread_once_t
+fielddecl  : [int __lock]
+fielddecl  : [unsigned int __nr_readers]
+fielddecl  : [unsigned int __readers_wakeup]
+fielddecl  : [unsigned int __writer_wakeup]
+fielddecl  : [unsigned int __nr_readers_queued]
+fielddecl  : [unsigned int __nr_writers_queued]
+fielddecl  : [int __writer]
+fielddecl  : [int __shared]
+fielddecl  : [signed char __rwelision]
+fielddecl  : [unsigned char __pad1[7]]
+fielddecl  : [unsigned long int __pad2]
+fielddecl  : [unsigned int __flags]
+fielddecl  : [struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_wakeup;
+    unsigned int __nr_readers_queued;
+    unsigned int __nr_writers_queued;
+    int __writer;
+    int __shared;
+    signed char __rwelision;
+#  ifdef  __ILP32__
+    unsigned char __pad1[3];
+#    define __PTHREAD_RWLOCK_ELISION_EXTRA 0, { 0, 0, 0 }
+#  else
+    unsigned char __pad1[7];
+#    define __PTHREAD_RWLOCK_ELISION_EXTRA 0, { 0, 0, 0, 0, 0, 0, 0 }
+#  endif
+    unsigned long int __pad2;
+    /* FLAGS must stay at this position in the structure to maintain
+       binary compatibility.  */
+    unsigned int __flags;
+# define __PTHREAD_RWLOCK_INT_FLAGS_SHARED	1
+  } __data]
+fielddecl  : [char __size[__SIZEOF_PTHREAD_RWLOCK_T]]
+fielddecl  : [long int __align]
+typedefdecl  : [typedef union
+{
+# ifdef __x86_64__
+  struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_wakeup;
+    unsigned int __nr_readers_queued;
+    unsigned int __nr_writers_queued;
+    int __writer;
+    int __shared;
+    signed char __rwelision;
+#  ifdef  __ILP32__
+    unsigned char __pad1[3];
+#    define __PTHREAD_RWLOCK_ELISION_EXTRA 0, { 0, 0, 0 }
+#  else
+    unsigned char __pad1[7];
+#    define __PTHREAD_RWLOCK_ELISION_EXTRA 0, { 0, 0, 0, 0, 0, 0, 0 }
+#  endif
+    unsigned long int __pad2;
+    /* FLAGS must stay at this position in the structure to maintain
+       binary compatibility.  */
+    unsigned int __flags;
+# define __PTHREAD_RWLOCK_INT_FLAGS_SHARED	1
+  } __data;
+# else
+  struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_wakeup;
+    unsigned int __nr_readers_queued;
+    unsigned int __nr_writers_queued;
+    /* FLAGS must stay at this position in the structure to maintain
+       binary compatibility.  */
+    unsigned char __flags;
+    unsigned char __shared;
+    signed char __rwelision;
+# define __PTHREAD_RWLOCK_ELISION_EXTRA 0
+    unsigned char __pad2;
+    int __writer;
+  } __data;
+# endif
+  char __size[__SIZEOF_PTHREAD_RWLOCK_T];
+  long int __align;
+} pthread_rwlock_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_RWLOCKATTR_T]]
+fielddecl  : [long int __align]
+typedefdecl  : [typedef union
+{
+  char __size[__SIZEOF_PTHREAD_RWLOCKATTR_T];
+  long int __align;
+} pthread_rwlockattr_t
+typedefdecl  : [typedef volatile int pthread_spinlock_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_BARRIER_T]]
+fielddecl  : [long int __align]
+typedefdecl  : [typedef union
+{
+  char __size[__SIZEOF_PTHREAD_BARRIER_T];
+  long int __align;
+} pthread_barrier_t
+fielddecl  : [char __size[__SIZEOF_PTHREAD_BARRIERATTR_T]]
+fielddecl  : [int __align]
+typedefdecl  : [typedef union
+{
+  char __size[__SIZEOF_PTHREAD_BARRIERATTR_T];
+  int __align;
+} pthread_barrierattr_t
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist random : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist srandom : /usr/include/stdlib.h
+vardecl  : [unsigned int __seed]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist initstate : /usr/include/stdlib.h
+vardecl  : [unsigned int __seed]
+vardecl  : [char *__statebuf]
+vardecl  : [size_t __statelen]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setstate : /usr/include/stdlib.h
+vardecl  : [char *__statebuf]
+fielddecl  : [int32_t *fptr]
+fielddecl  : [int32_t *rptr]
+fielddecl  : [int32_t *state]
+fielddecl  : [int rand_type]
+fielddecl  : [int rand_deg]
+fielddecl  : [int rand_sep]
+fielddecl  : [int32_t *end_ptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist random_r : /usr/include/stdlib.h
+vardecl  : [struct random_data *__restrict __buf]
+vardecl  : [int32_t *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist srandom_r : /usr/include/stdlib.h
+vardecl  : [unsigned int __seed]
+vardecl  : [struct random_data *__buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist initstate_r : /usr/include/stdlib.h
+vardecl  : [unsigned int __seed]
+vardecl  : [char *__restrict __statebuf]
+vardecl  : [size_t __statelen]
+vardecl  : [struct random_data *__restrict __buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setstate_r : /usr/include/stdlib.h
+vardecl  : [char *__restrict __statebuf]
+vardecl  : [struct random_data *__restrict __buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist rand : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist srand : /usr/include/stdlib.h
+vardecl  : [unsigned int __seed]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist rand_r : /usr/include/stdlib.h
+vardecl  : [unsigned int *__seed]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist drand48 : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist erand48 : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist lrand48 : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist nrand48 : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mrand48 : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist jrand48 : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist srand48 : /usr/include/stdlib.h
+vardecl  : [long int __seedval]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist seed48 : /usr/include/stdlib.h
+vardecl  : [unsigned short int __seed16v[3]]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist lcong48 : /usr/include/stdlib.h
+vardecl  : [unsigned short int __param[7]]
+fielddecl  : [unsigned short int __x[3]]
+fielddecl  : [unsigned short int __old_x[3]]
+fielddecl  : [unsigned short int __c]
+fielddecl  : [unsigned short int __init]
+fielddecl  : [unsigned long long int __a]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist drand48_r : /usr/include/stdlib.h
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [double *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist erand48_r : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [double *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist lrand48_r : /usr/include/stdlib.h
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [long int *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist nrand48_r : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [long int *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mrand48_r : /usr/include/stdlib.h
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [long int *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist jrand48_r : /usr/include/stdlib.h
+vardecl  : [unsigned short int __xsubi[3]]
+vardecl  : [struct drand48_data *__restrict __buffer]
+vardecl  : [long int *__restrict __result]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist srand48_r : /usr/include/stdlib.h
+vardecl  : [long int __seedval]
+vardecl  : [struct drand48_data *__buffer]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist seed48_r : /usr/include/stdlib.h
+vardecl  : [unsigned short int __seed16v[3]]
+vardecl  : [struct drand48_data *__buffer]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist lcong48_r : /usr/include/stdlib.h
+vardecl  : [unsigned short int __param[7]]
+vardecl  : [struct drand48_data *__buffer]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist malloc : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist malloc : /usr/include/stdlib.h
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist calloc : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist calloc : /usr/include/stdlib.h
+vardecl  : [size_t __nmemb]
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist realloc : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist realloc : /usr/include/stdlib.h
+vardecl  : [void *__ptr]
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist free : /usr/include/stdlib.h
+vardecl  : [void *__ptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist cfree : /usr/include/stdlib.h
+vardecl  : [void *__ptr]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist alloca : /usr/include/alloca.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist alloca : /usr/include/alloca.h
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist valloc : /usr/include/stdlib.h
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist posix_memalign : /usr/include/stdlib.h
+vardecl  : [void **__memptr]
+vardecl  : [size_t __alignment]
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist aligned_alloc : /usr/include/stdlib.h
+vardecl  : [size_t __alignment]
+vardecl  : [size_t __size]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist abort : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist abort : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist atexit : /usr/include/stdlib.h
+vardecl  : [void (*__func) (void)]
+AddArgGen 3 : [void (*__func) (void)]
+adding data flow at head of [void)]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist at_quick_exit : /usr/include/stdlib.h
+vardecl  : [void (*__func) (void)]
+AddArgGen 3 : [void (*__func) (void)]
+adding data flow at head of [void)]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist on_exit : /usr/include/stdlib.h
+vardecl  : [void (*__func) (int __status, void *__arg)]
+AddArgGen 3 : [void (*__func) (int __status, void *__arg)]
+adding data flow at head of [int __status, void *__arg)]
+vardecl  : [int __status]
+vardecl  : [void *__arg]
+vardecl  : [void *__arg]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist exit : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist exit : /usr/include/stdlib.h
+vardecl  : [int __status]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist quick_exit : /usr/include/stdlib.h
+vardecl  : [int __status]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _Exit : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist _Exit : /usr/include/stdlib.h
+vardecl  : [int __status]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getenv : /usr/include/stdlib.h
+vardecl  : [const char *__name]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist putenv : /usr/include/stdlib.h
+vardecl  : [char *__string]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist setenv : /usr/include/stdlib.h
+vardecl  : [const char *__name]
+vardecl  : [const char *__value]
+vardecl  : [int __replace]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist unsetenv : /usr/include/stdlib.h
+vardecl  : [const char *__name]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist clearenv : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mktemp : /usr/include/stdlib.h
+vardecl  : [char *__template]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mkstemp : /usr/include/stdlib.h
+vardecl  : [char *__template]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mkstemps : /usr/include/stdlib.h
+vardecl  : [char *__template]
+vardecl  : [int __suffixlen]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mkdtemp : /usr/include/stdlib.h
+vardecl  : [char *__template]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist system : /usr/include/stdlib.h
+vardecl  : [const char *__command]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist realpath : /usr/include/stdlib.h
+vardecl  : [const char *__restrict __name]
+vardecl  : [char *__restrict __resolved]
+typedefdecl  : [typedef int (*__compar_fn_t) (const void *, const void *)
+AddArgGen 4 : [typedef int (*__compar_fn_t) (const void *, const void *)]
+adding data flow at head of [const void *, const void *)]
+vardecl  : [const void *]
+vardecl  : [const void *]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist bsearch : /usr/include/stdlib.h
+vardecl  : [const void *__key]
+vardecl  : [const void *__base]
+vardecl  : [size_t __nmemb]
+vardecl  : [size_t __size]
+vardecl  : [__compar_fn_t __compar]
+AddArgGen 3 : [__compar_fn_t __compar]
+no parens
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qsort : /usr/include/stdlib.h
+vardecl  : [void *__base]
+vardecl  : [size_t __nmemb]
+vardecl  : [size_t __size]
+vardecl  : [__compar_fn_t __compar]
+AddArgGen 3 : [__compar_fn_t __compar]
+no parens
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist abs : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist abs : /usr/include/stdlib.h
+vardecl  : [int __x]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist labs : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist labs : /usr/include/stdlib.h
+vardecl  : [long int __x]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist llabs : /usr/include/stdlib.h
+vardecl  : [Invalid]
+... is invalid
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist llabs : /usr/include/stdlib.h
+vardecl  : [long long int __x]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist div : /usr/include/stdlib.h
+vardecl  : [int __numer]
+vardecl  : [int __denom]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ldiv : /usr/include/stdlib.h
+vardecl  : [long int __numer]
+vardecl  : [long int __denom]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist lldiv : /usr/include/stdlib.h
+vardecl  : [long long int __numer]
+vardecl  : [long long int __denom]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ecvt : /usr/include/stdlib.h
+vardecl  : [double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fcvt : /usr/include/stdlib.h
+vardecl  : [double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist gcvt : /usr/include/stdlib.h
+vardecl  : [double __value]
+vardecl  : [int __ndigit]
+vardecl  : [char *__buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qecvt : /usr/include/stdlib.h
+vardecl  : [long double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qfcvt : /usr/include/stdlib.h
+vardecl  : [long double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qgcvt : /usr/include/stdlib.h
+vardecl  : [long double __value]
+vardecl  : [int __ndigit]
+vardecl  : [char *__buf]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist ecvt_r : /usr/include/stdlib.h
+vardecl  : [double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+vardecl  : [char *__restrict __buf]
+vardecl  : [size_t __len]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist fcvt_r : /usr/include/stdlib.h
+vardecl  : [double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+vardecl  : [char *__restrict __buf]
+vardecl  : [size_t __len]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qecvt_r : /usr/include/stdlib.h
+vardecl  : [long double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+vardecl  : [char *__restrict __buf]
+vardecl  : [size_t __len]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist qfcvt_r : /usr/include/stdlib.h
+vardecl  : [long double __value]
+vardecl  : [int __ndigit]
+vardecl  : [int *__restrict __decpt]
+vardecl  : [int *__restrict __sign]
+vardecl  : [char *__restrict __buf]
+vardecl  : [size_t __len]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mblen : /usr/include/stdlib.h
+vardecl  : [const char *__s]
+vardecl  : [size_t __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mbtowc : /usr/include/stdlib.h
+vardecl  : [wchar_t *__restrict __pwc]
+vardecl  : [const char *__restrict __s]
+vardecl  : [size_t __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist wctomb : /usr/include/stdlib.h
+vardecl  : [char *__s]
+vardecl  : [wchar_t __wchar]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist mbstowcs : /usr/include/stdlib.h
+vardecl  : [wchar_t *__restrict  __pwcs]
+vardecl  : [const char *__restrict __s]
+vardecl  : [size_t __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist wcstombs : /usr/include/stdlib.h
+vardecl  : [char *__restrict __s]
+vardecl  : [const wchar_t *__restrict __pwcs]
+vardecl  : [size_t __n]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist rpmatch : /usr/include/stdlib.h
+vardecl  : [const char *__response]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getsubopt : /usr/include/stdlib.h
+vardecl  : [char **__restrict __optionp]
+vardecl  : [char *const *__restrict __tokens]
+vardecl  : [char **__restrict __valuep]
+FuncDeclArgAdditionHandler: Function def/decl is NOT in whitelist getloadavg : /usr/include/stdlib.h
+vardecl  : [double __loadavg[]]
+vardecl  : [int __nelem]
+typedefdecl  : [typedef unsigned char		uint8_t
+typedefdecl  : [typedef unsigned short int	uint16_t
+typedefdecl  : [typedef unsigned int		uint32_t
+typedefdecl  : [typedef unsigned long int	uint64_t
+typedefdecl  : [typedef signed char		int_least8_t
+typedefdecl  : [typedef short int		int_least16_t
+typedefdecl  : [typedef int			int_least32_t
+typedefdecl  : [typedef long int		int_least64_t
+typedefdecl  : [typedef unsigned char		uint_least8_t
+typedefdecl  : [typedef unsigned short int	uint_least16_t
+typedefdecl  : [typedef unsigned int		uint_least32_t
+typedefdecl  : [typedef unsigned long int	uint_least64_t
+typedefdecl  : [typedef signed char		int_fast8_t
+typedefdecl  : [typedef long int		int_fast16_t
+typedefdecl  : [typedef long int		int_fast32_t
+typedefdecl  : [typedef long int		int_fast64_t
+typedefdecl  : [typedef unsigned char		uint_fast8_t
+typedefdecl  : [typedef unsigned long int	uint_fast16_t
+typedefdecl  : [typedef unsigned long int	uint_fast32_t
+typedefdecl  : [typedef unsigned long int	uint_fast64_t
+typedefdecl  : [typedef long int		intptr_t
+typedefdecl  : [typedef unsigned long int	uintptr_t
+typedefdecl  : [typedef long int		intmax_t
+typedefdecl  : [typedef unsigned long int	uintmax_t
+fielddecl  : [uint32_t magic]
+fielddecl  : [uint32_t reserved]
+fielddecl  : [uint16_t num_recs]
+fielddecl  : [uint16_t flags]
+fielddecl  : [uint32_t timestamp]
+typedefdecl  : [typedef struct {
+    uint32_t magic;     // Magic value
+    uint32_t reserved;  // Reserved for future use
+    uint16_t num_recs;  // How many entries?
+    uint16_t flags;     // None used yet
+    uint32_t timestamp; // Unix Time
+} file_header
+fielddecl  : [char bar[16]]
+fielddecl  : [uint32_t type]
+fielddecl  : [float fdata]
+fielddecl  : [uint32_t intdata]
+fielddecl  : [union {
+        float fdata;
+        uint32_t intdata;
+    } data]
+typedefdecl  : [typedef struct {
+    char bar[16];
+    uint32_t type;
+    union {
+        float fdata;
+        uint32_t intdata;
+    } data;
+} file_entry
+FuncDeclArgAdditionHandler: Function def/decl is in whitelist     parse_header : toy.c
+FuncDeclArgAdditionHandler handle: ok to instrument parse_header
+adding arg to parse_header
+has body
+can find body
+actually adding arg
+func->getLocStart = 528
+func->getLocEnd = 690
+func : [void parse_header(FILE *f, file_header *hdr) {
+    if (1 != fread(hdr, sizeof(file_header), 1, f))
+        exit(1);
+    if (hdr->magic != MAGIC)
+        exit(1);
+}]
+has body -- looking for {
+ FOUND {
+AddArgGen 1 : [void parse_header(FILE *f, file_header *hdr) {]
+adding data flow at head of [FILE *f, file_header *hdr) {]
+vardecl  : [FILE *f]
+vardecl  : [file_header *hdr]
+PriQueryPointHandler: Containing function is in whitelist parse_header : toy.c
+PriQueryPointHandler handle: ok to instrument parse_header
+Have a query point @ toy.c:31:5:32:15!
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:20:31:20
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:25:31:43
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:46:31:46
+Inserting expression attack (AttackExpression).
+start: toy.c:31:14
+end:   toy.c:31:50
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:31:49:31:49
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [fread(hdr, sizeof(file_header), 1, f)
+containing function is in whitelist parse_header : toy.c
+called function is NOT in whitelist fread : /usr/include/stdio.h
+start: toy.c:32:9
+end:   toy.c:32:15
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:32:14:32:14
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [exit(1)
+containing function is in whitelist parse_header : toy.c
+called function is NOT in whitelist exit : /usr/include/stdlib.h
+PriQueryPointHandler: Containing function is in whitelist parse_header : toy.c
+PriQueryPointHandler handle: ok to instrument parse_header
+Have a query point @ toy.c:33:5:34:15!
+ Injecting dua siphon at toy.c:33:5:34:15
+    Text: if ( (f) && ((*f)._IO_read_ptr)) {
+DFLOG(9, *(const unsigned int *)((*f)._IO_read_ptr));
+}
+if ( (f) && ((*f)._IO_read_base)) {
+DFLOG(0, *(const unsigned int *)((*f)._IO_read_base));
+}
+if ( (f) && ((*f)._IO_write_base)) {
+DFLOG(10, *(const unsigned int *)((*f)._IO_write_base));
+}
+if (hdr) {
+DFLOG(2, *(const unsigned int *)hdr);
+}
+if ( (hdr) && &((*hdr).magic)) {
+DFLOG(14, *(const unsigned int *)&((*hdr).magic));
+}
+if ( (hdr) && &((*hdr).reserved)) {
+DFLOG(16, *(const unsigned int *)&((*hdr).reserved));
+}
+if ( (hdr) && &((*hdr).flags)) {
+DFLOG(11, *(const unsigned int *)&((*hdr).flags));
+}
+if ( (hdr) && &((*hdr).timestamp)) {
+DFLOG(1, *(const unsigned int *)&((*hdr).timestamp));
+}
+
+start: toy.c:34:9
+end:   toy.c:34:15
+FunctionArgHandler: Containing function is in whitelist parse_header : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_header
+FunctionArgHandler @ toy.c:34:14:34:14
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [exit(1)
+containing function is in whitelist parse_header : toy.c
+called function is NOT in whitelist exit : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is in whitelist     parse_record : toy.c
+FuncDeclArgAdditionHandler handle: ok to instrument parse_record
+adding arg to parse_record
+has body
+can find body
+actually adding arg
+func->getLocStart = 693
+func->getLocEnd = 879
+func : [file_entry * parse_record(FILE *f) {
+    file_entry *ret = (file_entry *) malloc(sizeof(file_entry));
+    if (1 != fread(ret, sizeof(file_entry), 1, f))
+        exit(1);
+    return ret;
+}]
+has body -- looking for {
+ FOUND {
+AddArgGen 1 : [file_entry * parse_record(FILE *f) {]
+adding data flow at head of [FILE *f) {]
+vardecl  : [FILE *f]
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:38:5:38:64!
+ Injecting dua siphon at toy.c:38:5:38:64
+    Text: if ( (f) && ((*f)._IO_write_base)) {
+DFLOG(37, *(const unsigned int *)((*f)._IO_write_base));
+}
+if ( (f) && ((*f)._IO_write_ptr)) {
+DFLOG(15, *(const unsigned int *)((*f)._IO_write_ptr));
+}
+
+vardecl  : [file_entry *ret = (file_entry *) malloc(sizeof(file_entry))]
+start: toy.c:38:38
+end:   toy.c:38:63
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [malloc]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:38:45:38:62
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [malloc(sizeof(file_entry))
+containing function is in whitelist parse_record : toy.c
+called function is NOT in whitelist malloc : /usr/include/stdlib.h
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:39:5:40:15!
+ Injecting dua siphon at toy.c:39:5:40:15
+    Text: if ( (f) && ((*f)._IO_read_base)) {
+DFLOG(27, *(const unsigned int *)((*f)._IO_read_base));
+}
+if ( (f) && ((*f)._IO_write_end)) {
+DFLOG(25, *(const unsigned int *)((*f)._IO_write_end));
+}
+if ( (f) && ((*f)._IO_buf_base)) {
+DFLOG(23, *(const unsigned int *)((*f)._IO_buf_base));
+}
+if ( (ret) && ((*ret).bar)) {
+DFLOG(39, *((const unsigned int *)((*ret).bar) + 1));
+}
+
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:20:39:20
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:25:39:42
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:45:39:45
+Inserting expression attack (AttackExpression).
+start: toy.c:39:14
+end:   toy.c:39:49
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [fread]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:39:48:39:48
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [fread(ret, sizeof(file_entry), 1, f)
+containing function is in whitelist parse_record : toy.c
+called function is NOT in whitelist fread : /usr/include/stdio.h
+start: toy.c:40:9
+end:   toy.c:40:15
+FunctionArgHandler: Containing function is in whitelist parse_record : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument parse_record
+FunctionArgHandler @ toy.c:40:14:40:14
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [exit(1)
+containing function is in whitelist parse_record : toy.c
+called function is NOT in whitelist exit : /usr/include/stdlib.h
+PriQueryPointHandler: Containing function is in whitelist parse_record : toy.c
+PriQueryPointHandler handle: ok to instrument parse_record
+Have a query point @ toy.c:41:5:41:12!
+ Injecting dua siphon at toy.c:41:5:41:12
+    Text: if ( (f) && ((*f)._IO_read_base)) {
+DFLOG(29, *(const unsigned int *)((*f)._IO_read_base));
+}
+if ( (f) && ((*f)._IO_write_end)) {
+DFLOG(26, *(const unsigned int *)((*f)._IO_write_end));
+}
+if ( (f) && ((*f)._IO_buf_base)) {
+DFLOG(30, *(const unsigned int *)((*f)._IO_buf_base));
+}
+if (ret) {
+DFLOG(21, *(const unsigned int *)ret);
+}
+if ( (ret) && &((*ret).bar)) {
+DFLOG(31, *(const unsigned int *)&((*ret).bar));
+}
+
+FuncDeclArgAdditionHandler: Function def/decl is in whitelist     consume_record : toy.c
+FuncDeclArgAdditionHandler handle: ok to instrument consume_record
+adding arg to consume_record
+has body
+can find body
+actually adding arg
+func->getLocStart = 882
+func->getLocEnd = 1240
+func : [void consume_record(file_entry *ent) {
+    printf("Entry: bar = %s, ", ent->bar);
+    if (ent->type == TYPEA) {
+        printf("fdata = %f\n", ent->data.fdata);
+    }
+    else if (ent->type == TYPEB) {
+        printf("intdata = %u\n", ent->data.intdata);
+    }
+    else {
+        printf("Unknown type %x\n", ent->type);
+        exit(1);
+    }
+    free(ent);
+}]
+has body -- looking for {
+ FOUND {
+AddArgGen 1 : [void consume_record(file_entry *ent) {]
+adding data flow at head of [file_entry *ent) {]
+vardecl  : [file_entry *ent]
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:45:5:45:41!
+ Injecting dua siphon at toy.c:45:5:45:41
+    Text: if (ent) {
+DFLOG(35, *(const unsigned int *)ent);
+}
+
+CallExprArgAdditionHandler
+callexpr: [printf("Entry: bar = %s, ", ent->bar)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist printf : /usr/include/stdio.h
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:46:5:55:5!
+ Injecting dua siphon at toy.c:46:5:55:5
+    Text: if ( (ent) && &((*ent).type)) {
+DFLOG(38, *(const unsigned int *)&((*ent).type));
+}
+
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:47:9:47:47!
+ Injecting dua siphon at toy.c:47:9:47:47
+    Text: if (ent) {
+DFLOG(28, *(const unsigned int *)ent);
+}
+if ( (ent) && &((*ent).bar)) {
+DFLOG(32, *(const unsigned int *)&((*ent).bar));
+}
+
+CallExprArgAdditionHandler
+callexpr: [printf("fdata = %f\n", ent->data.fdata)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist printf : /usr/include/stdio.h
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:50:9:50:51!
+ Injecting dua siphon at toy.c:50:9:50:51
+    Text: if ( (ent) && &((*ent).bar)) {
+DFLOG(40, *(const unsigned int *)&((*ent).bar));
+}
+
+start: toy.c:50:9
+end:   toy.c:50:51
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:50:34:50:44
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [printf("intdata = %u\n", ent->data.intdata)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist printf : /usr/include/stdio.h
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:53:9:53:46!
+start: toy.c:53:9
+end:   toy.c:53:46
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:53:37:53:42
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [printf("Unknown type %x\n", ent->type)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist printf : /usr/include/stdio.h
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:54:9:54:15!
+start: toy.c:54:9
+end:   toy.c:54:15
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [exit]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:54:14:54:14
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [exit(1)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist exit : /usr/include/stdlib.h
+PriQueryPointHandler: Containing function is in whitelist consume_record : toy.c
+PriQueryPointHandler handle: ok to instrument consume_record
+Have a query point @ toy.c:56:5:56:13!
+ Injecting dua siphon at toy.c:56:5:56:13
+    Text: if ( (ent) && ((*ent).bar)) {
+DFLOG(24, *(const unsigned int *)((*ent).bar));
+}
+
+start: toy.c:56:5
+end:   toy.c:56:13
+FunctionArgHandler: Containing function is in whitelist consume_record : toy.c
+Callee name is [free]
+FunctionArgHandler handle: ok to instrument consume_record
+FunctionArgHandler @ toy.c:56:10:56:10
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [free(ent)
+containing function is in whitelist consume_record : toy.c
+called function is NOT in whitelist free : /usr/include/stdlib.h
+FuncDeclArgAdditionHandler: Function def/decl is in whitelist     main : toy.c
+FuncDeclArgAdditionHandler handle: ok to instrument main
+adding arg to main
+has body
+can find body
+actually adding arg
+vardecl  : [int argc]
+vardecl  : [char **argv]
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:60:5:60:35!
+vardecl  : [FILE *f = fopen(argv[1], "rb")]
+start: toy.c:60:15
+end:   toy.c:60:34
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [fopen]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:60:21:60:27
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [fopen(argv[1], "rb")
+containing function is in whitelist main : toy.c
+called function is NOT in whitelist fopen : /usr/include/stdio.h
+MemoryAccessHandler: Containing function is in whitelist main : toy.c
+MemoryAccessHandler: ok to instrument main
+Inserting expression attack (AttackExpression).
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:61:5:61:21!
+vardecl  : [file_header head]
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:63:5:63:26!
+start: toy.c:63:5
+end:   toy.c:63:26
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_header]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:63:18:63:18
+Inserting expression attack (AttackExpression).
+start: toy.c:63:5
+end:   toy.c:63:26
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_header]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:63:21:63:22
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [parse_header(f, &head)
+containing function is in whitelist main : toy.c
+called function is in whitelist parse_header : toy.c
+Neither
+Call addarg for dataflow
+call->getLocStart = 1340
+call->getLocEnd = 1361
+call : [parse_header(f, &head)]
+AddArgGen 5 : [parse_header(f, &head)]
+adding data flow at head of [f, &head)]
+Done with addarg
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:64:5:64:50!
+ Injecting dua siphon at toy.c:64:5:64:50
+    Text: if ( (f) && ((*f)._IO_write_base)) {
+DFLOG(12, *(const unsigned int *)((*f)._IO_write_base));
+}
+if (&head) {
+DFLOG(6, *(const unsigned int *)&head);
+}
+if (&(head.magic)) {
+DFLOG(7, *(const unsigned int *)&(head.magic));
+}
+if (&(head.num_recs)) {
+DFLOG(17, *(const unsigned int *)&(head.num_recs));
+}
+if (&(head.flags)) {
+DFLOG(4, *(const unsigned int *)&(head.flags));
+}
+
+start: toy.c:64:5
+end:   toy.c:64:50
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [printf]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:64:36:64:41
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [printf("File timestamp: %u\n", head.timestamp)
+containing function is in whitelist main : toy.c
+called function is NOT in whitelist printf : /usr/include/stdio.h
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:66:5:66:15!
+ Injecting dua siphon at toy.c:66:5:66:15
+    Text: if (&(head.magic)) {
+DFLOG(20, *(const unsigned int *)&(head.magic));
+}
+if (&(head.reserved)) {
+DFLOG(13, *(const unsigned int *)&(head.reserved));
+}
+if (&(head.flags)) {
+DFLOG(36, *(const unsigned int *)&(head.flags));
+}
+
+vardecl  : [unsigned i]
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:67:5:70:5!
+ Injecting dua siphon at toy.c:67:5:70:5
+    Text: if ( (f) && ((*f)._IO_read_base)) {
+DFLOG(18, *(const unsigned int *)((*f)._IO_read_base));
+}
+if ( (f) && ((*f)._IO_write_base)) {
+DFLOG(8, *(const unsigned int *)((*f)._IO_write_base));
+}
+if ( (f) && ((*f)._IO_write_end)) {
+DFLOG(19, *(const unsigned int *)((*f)._IO_write_end));
+}
+if (&(head.magic)) {
+DFLOG(5, *(const unsigned int *)&(head.magic));
+}
+
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:68:9:68:42!
+ Injecting dua siphon at toy.c:68:9:68:42
+    Text: if ( (f) && ((*f)._IO_buf_base)) {
+DFLOG(3, *(const unsigned int *)((*f)._IO_buf_base));
+}
+if (&(head.flags)) {
+DFLOG(22, *(const unsigned int *)&(head.flags));
+}
+
+vardecl  : [file_entry *ent = parse_record(f)]
+start: toy.c:68:27
+end:   toy.c:68:41
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [parse_record]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:68:40:68:40
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [parse_record(f)
+containing function is in whitelist main : toy.c
+called function is in whitelist parse_record : toy.c
+Neither
+Call addarg for dataflow
+call->getLocStart = 1501
+call->getLocEnd = 1515
+call : [parse_record(f)]
+AddArgGen 5 : [parse_record(f)]
+adding data flow at head of [f)]
+Done with addarg
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:69:9:69:27!
+ Injecting dua siphon at toy.c:69:9:69:27
+    Text: if ( (f) && ((*f)._IO_buf_base)) {
+DFLOG(33, *(const unsigned int *)((*f)._IO_buf_base));
+}
+if (&head) {
+DFLOG(34, *(const unsigned int *)&head);
+}
+
+start: toy.c:69:9
+end:   toy.c:69:27
+FunctionArgHandler: Containing function is in whitelist main : toy.c
+Callee name is [consume_record]
+FunctionArgHandler handle: ok to instrument main
+FunctionArgHandler @ toy.c:69:24:69:24
+Inserting expression attack (AttackExpression).
+CallExprArgAdditionHandler
+callexpr: [consume_record(ent)
+containing function is in whitelist main : toy.c
+called function is in whitelist consume_record : toy.c
+Neither
+Call addarg for dataflow
+call->getLocStart = 1526
+call->getLocEnd = 1544
+call : [consume_record(ent)]
+AddArgGen 5 : [consume_record(ent)]
+adding data flow at head of [ent)]
+Done with addarg
+PriQueryPointHandler: Containing function is in whitelist main : toy.c
+PriQueryPointHandler handle: ok to instrument main
+Have a query point @ toy.c:71:5:71:12!
+*** handleEndSource
+back from calling Tool.run 

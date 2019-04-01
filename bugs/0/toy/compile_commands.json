@@ -1,0 +1,1 @@
+[{"directory": "/home/lmy/tool/lava-master/target_injections/toy/bugs/0/toy", "command": "cc -Wno-int-conversion -gdwarf-2 -c -o toy.o toy.c -I/llvm-3.6.2/Release/lib/clang/3.6.2/include", "file": "toy.c"}]
